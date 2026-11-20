@@ -65,3 +65,19 @@ The reading target is roughly age seven, with optional support and read-aloud. T
 - No DC, Marvel, Batman, Spider-Man, or other franchise assets, costume designs, logos, screenshots, video, or soundtracks are included. Historic style research is linked in the art record; no research-site media are redistributed.
 - Music melodies, arrangements, synthesis, and effects are original to this game. No sample libraries or pre-existing theme tunes are used. See AUDIO.md and the source manifest.
 - The public repository is not itself a grant of an open-source license to original game assets. See LICENSE.md. Third-party source rights and notices remain separate.
+
+## Version 1.1.0: applied operations
+
+Original simulations now connect planning choices to extra shifts and the rover’s first-day route. Current saved mission reports determine the result; replay replaces a report rather than accumulating penalties. Classification activities explain each card. Operational activities accept complete but strained plans, show their costs, and allow revision. These deterministic outcomes are teaching models, not empirical production forecasts.
+
+- Issue 6: capacity, overburden (muri), and waiting.
+- Issue 8: explicit start/finish and movement policies, a WIP limit, four observed board metrics, and a service target. A separate returned-card dispatch models pull replenishment with a two-pack buffer. This distinguishes manufacturing signals from a knowledge-work board.
+- Issue 10: stopping abnormal output, a visible call for support (andon), cause correction, retesting, and error-proofing through a shaped guide. Letting the printer run creates rework.
+- Issue 12: baseline observation, a change, two trials, comparison, and a decision to keep or revise the process. Lower motion differs from pressuring a worker.
+
+Primary conceptual references checked November 20, 2026:
+
+- Toyota Motor Corporation, Toyota Production System: https://global.toyota/en/company/vision-and-philosophy/production-system/ . Copyrighted reference; no prose, media, logo, or proprietary course is reproduced. Its two pillars are jidoka and just-in-time. TPS also addresses ease of work and ongoing improvement; the game does not reduce it to speed or zero inventory.
+- John Coleman and Daniel Vacanti, The Kanban Guide, May 2025: https://kanbanguides.org/the-kanban-guide . CC BY-SA 4.0. Linked for further study; no guide prose, diagrams, or exercise structure is reproduced. The game’s explanations, examples, and simulation structure are original. Its four-turn service target is illustrative, not a forecast derived from historical probabilities.
+
+The game introduces foundations. It does not grant a professional Kanban, Lean, Toyota, or MBA credential.

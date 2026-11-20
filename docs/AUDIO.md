@@ -1,21 +1,23 @@
-# Sound design
+# Soundtrack and sound credits
 
-All scores and effects are original to Super Duper Jaydens! No commercial song, superhero theme, recording, sampled orchestra, or third-party sound-effect library is used.
+Version 1.1.0 replaces the original synthesized background playlist with licensed recordings by Kevin MacLeod.
 
-The goal is a hopeful 1990s superhero-animation atmosphere at reading volume: dark-city warmth, heroic melodic identity, brass-like leads, strings, bells, a rhythmic electric color, and controlled radio/gadget cues. There are no alarm sirens, combat sounds, jump scares, or punitive error buzzers.
+Each track is by **Kevin MacLeod (incompetech.com)**, licensed under **Creative Commons: By Attribution 4.0**: https://creativecommons.org/licenses/by/4.0/
 
-## Scores
+- Cipher: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844
+- Covert Affair: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100795
+- Marty Gots a Plan: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500015
+- Heroic Age: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100848
 
-1. Signal City Overture: 123 seconds. Warm brass-like lead, string pulses, walking foundation, and a recurring original major-key motif.
-2. Above the Skyline: about 95 seconds. A different six-beat string melody with bell-like accompaniment.
-3. Dispatch Radio: about 114 seconds. Rhythmic synthesized electric lead and bass, with quiet percussion and a separate melody.
-4. Light the Beacons: about 105 seconds. Broad brass-and-string phrases with more space between them.
-5. A City Made Together: about 45 seconds. A separate closing theme for the accepted and handed-over Signal Rover. It is not part of the ordinary rotation.
+The first three form a roughly ten-minute city playlist: electric-piano groove, noir jazz, and playful orchestral planning. Heroic Age is reserved for the mission finale. This music is not public domain; retain these credits and license links with any distribution or commercial release. No composer endorsement is implied.
 
-The ordinary playlist runs for over seven minutes before returning to its first track. Tracks have different melodies, meters or phrasing, instrument palettes, and arrangements. Each file is rendered with a -20 LUFS loudness target and -2 dBTP ceiling. Playback volume is lower by default and remains adjustable.
+## Source and changes
 
-Music starts after a user gesture and follows the current player’s saved choice. Quiet is always allowed. Next track is available in Sound. Background music ducks during requested narration and stops while taking a break or hiding the browser tab. The special finishing theme follows the music preference, replaces the normal track, and does not auto-play simply because a completed ending was reloaded.
+Official catalog: https://incompetech.com/music/royalty-free/pieces.json
+Official licensing information: https://incompetech.com/music/royalty-free/licenses/
 
-Effects use a short filtered radio click, a soft noise-based panel/paper sweep, and a brief filtered major confirmation phrase. Effects follow their own setting and do not run during narration or in a hidden tab.
+The recordings were downloaded from the composer’s official catalog, normalized with a -22 LUFS target and -2 dBTP ceiling, given a 1.5-second entrance fade, and re-encoded as MP3. No melodic edits were made. File hashes, durations, source URLs, creator, license, and changes are retained in assets/audio/manifest.json.
 
-Regenerate recordings with Python + NumPy and ffmpeg via `scripts/compose.py`. Runtime effects and playback are in `audio.js`. File hashes and exact durations are recorded in `assets/audio/manifest.json`.
+Sound settings show the track and composer and link to credits. Volume, next track, quiet, tab pause, rest breaks, and read-aloud ducking remain available. Music starts after a gesture, follows the player’s preference, and the finale replaces rather than layers over background music.
+
+The brief radio, paper, and confirmation effects are original Web Audio cues in audio.js. The older score generator scripts/compose.py is retained as historical source only; its recordings are not used or shipped in version 1.1.0.

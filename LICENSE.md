@@ -7,3 +7,7 @@ This notice does not override Creative Commons licenses or other rights in third
 No commercial permission is obtained from the mere fact that a text can be read free of charge. NonCommercial sections, textbook figures, embedded video, franchise art, characters, logos, themes, and third-party samples are not included as game assets.
 
 Research references and publisher trademarks identify sources only. They do not imply endorsement.
+
+## Licensed soundtrack
+
+Cipher, Covert Affair, Marty Gots a Plan, and Heroic Age are by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0, https://creativecommons.org/licenses/by/4.0/ . Their recordings are third-party material, excluded from the reservation of original-game rights above. Track-specific source links, attribution, and mastering changes are in docs/AUDIO.md and assets/audio/manifest.json and in the in-game credits. Preserve those notices.

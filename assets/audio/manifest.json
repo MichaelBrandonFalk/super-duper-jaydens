@@ -1,52 +1,46 @@
 [
   {
-    "file": "assets/audio/city-after-school.mp3",
-    "duration": 123.0,
-    "lead": "brass",
-    "meter": 4,
-    "bpm": 96.0,
-    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
-    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
-    "sha256": "cd90e2129bf970abfce84f0f494a8ceb85b2b77eddfe2836cd4eca218b1ddc91"
+    "file": "assets/audio/cipher.mp3",
+    "title": "Cipher",
+    "creator": "Kevin MacLeod",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100844",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Playback master normalized to -22 LUFS target, -2 dBTP ceiling, 1.5 second fade-in, MP3 re-encoding. No melody edits.",
+    "duration": 231.26,
+    "sha256": "dc62519f81dd74b62320d8a29b14068dd769f2a18ef553a8250fa6ebcecf96dc"
   },
   {
-    "file": "assets/audio/skyline-sketch.mp3",
-    "duration": 95.16,
-    "lead": "strings",
-    "meter": 6,
-    "bpm": 187.5,
-    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
-    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
-    "sha256": "8283bbc406dc5dcb991432f8426bb15a5b161bec7caf04d7eb320e42ae7fa5eb"
+    "file": "assets/audio/covert-affair.mp3",
+    "title": "Covert Affair",
+    "creator": "Kevin MacLeod",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100795",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Playback master normalized to -22 LUFS target, -2 dBTP ceiling, 1.5 second fade-in, MP3 re-encoding. No melody edits.",
+    "duration": 194.19,
+    "sha256": "6a835b747d170ed7c9ae1ba7d1e76a8121ef2cf06f6931024144d0ab95b2708c"
   },
   {
-    "file": "assets/audio/workshop-windows.mp3",
-    "duration": 114.36,
-    "lead": "guitar",
-    "meter": 4,
-    "bpm": 103.45,
-    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
-    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
-    "sha256": "4e76c852776ee97cb37ec98fdbee46fedd637536bf99ea3bed42724b549d2d65"
+    "file": "assets/audio/marty-gots-a-plan.mp3",
+    "title": "Marty Gots a Plan",
+    "creator": "Kevin MacLeod",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500015",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Playback master normalized to -22 LUFS target, -2 dBTP ceiling, 1.5 second fade-in, MP3 re-encoding. No melody edits.",
+    "duration": 168.07,
+    "sha256": "9ae9ba76a250d7da5b03cd98cb4ed0eb4b0d140c1d46f6fe03af8423fb5d9bdc"
   },
   {
-    "file": "assets/audio/rooftop-daybreak.mp3",
-    "duration": 105.4,
-    "lead": "brass",
-    "meter": 4,
-    "bpm": 75.0,
-    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
-    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
-    "sha256": "8eafc91f25c59ac35b84ac5b6224c3219cf7c636a65b1d59b46c8b7af5cf0ca5"
-  },
-  {
-    "file": "assets/audio/a-city-made-together.mp3",
-    "duration": 45.24,
-    "lead": "brass",
-    "meter": 4,
-    "bpm": 90.91,
-    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
-    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
-    "sha256": "81633e5e3afd34bd5ed573947d2568f249c4973edd9f85db5cb192e357590e3c"
+    "file": "assets/audio/heroic-age.mp3",
+    "title": "Heroic Age",
+    "creator": "Kevin MacLeod",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100848",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Playback master normalized to -22 LUFS target, -2 dBTP ceiling, 1.5 second fade-in, MP3 re-encoding. No melody edits.",
+    "duration": 97.46,
+    "sha256": "0e8cedb2cd6b2e42b91520f9503ef7399320d85b00df4d5ed865424001c117d2"
   }
 ]
