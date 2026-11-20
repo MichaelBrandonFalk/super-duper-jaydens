@@ -1,0 +1,138 @@
+[
+  {
+    "file": "assets/art/scene-01.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "88c03bddeaf8e80320d294b41f2eb9ec9c592c5ca4604b9ed8e6f64cb4c901b3"
+  },
+  {
+    "file": "assets/art/scene-02.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "5d097ab70e266d5cfb16121ede46c82e328e7fe1234681aa8d0bb5f443317a01"
+  },
+  {
+    "file": "assets/art/scene-03.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "e5c2680accc4789b9c92340a2f0827eaf08ed2f1b2f8b0211e19e6c4dc6e778b"
+  },
+  {
+    "file": "assets/art/scene-04.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "479edfc47312391f4c4f501d6f367b9d01cd6eed148a5e1f1c423c489a320d67"
+  },
+  {
+    "file": "assets/art/scene-05.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "4660cf3e995077b40e59897ec3718a9a7f45744bb32184fe7692b49f68e8b99d"
+  },
+  {
+    "file": "assets/art/scene-06.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "4a858e5131fb31665710729305a03aebbb1cbc3500dccaf62802cc22f6e0ad6e"
+  },
+  {
+    "file": "assets/art/scene-07.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "8c219237d166b0226d4fa5a83fdbed74e652d10a16ce164114c9f94f4d2f11f8"
+  },
+  {
+    "file": "assets/art/scene-08.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "25428aa885af7993013ffb7da4617c807820f3173388d85b77bcfbbea48c18a0"
+  },
+  {
+    "file": "assets/art/scene-09.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "42332063b2557624ffc98cd7ba0501b9a1837209d758a8d1d908e958bfa1b7d2"
+  },
+  {
+    "file": "assets/art/scene-10.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "6cc8c5fab7c09af89a2c96e0bd9ff9eac7f1c0dae1e32b52ee16b96c8adebdb1"
+  },
+  {
+    "file": "assets/art/scene-11.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "3b92fe03206828ef4000b4d61f92531c7a76971b7c47f01fe24758a3cb054581"
+  },
+  {
+    "file": "assets/art/scene-12.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "58f706e958fbf2663d8a9c971d281df2705be9ec7130d3ff0debabf2d5db5485"
+  },
+  {
+    "file": "assets/art/cover.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "7751aefc923978c98977e0d43ac1390ab8083c3c6f2728945b9ce49e997a8bc4"
+  },
+  {
+    "file": "assets/art/cover-small.webp",
+    "size": [
+      960,
+      640
+    ],
+    "sha256": "0417f85dd22216dfc27afeca424c8593855e2da6b8401d30f46c5bfb0ac56f8e"
+  },
+  {
+    "file": "assets/art/finale.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "d29231af620e7bc3efcd37635d96731ca841e2c9296920a5f40985f53c86b56a"
+  },
+  {
+    "file": "assets/art/finale-small.webp",
+    "size": [
+      960,
+      640
+    ],
+    "sha256": "1e4f6f35f832b1dae57ea7a53f8c3d41465bdfb4206cc33fcd715b65ae89434c"
+  },
+  {
+    "file": "assets/art/scene-13.webp",
+    "size": [
+      768,
+      512
+    ],
+    "sha256": "ed291c2ac0394b8f54f8577107cfb26f885af80dfeef5291f9dae700a82d9098"
+  }
+]

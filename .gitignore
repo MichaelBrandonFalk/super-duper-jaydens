@@ -1,0 +1,9 @@
+node_modules/
+output/
+dist/
+.DS_Store
+.tools/
+
+assets/*-original.png
+assets/art/*-original.png
+assets/*.b64

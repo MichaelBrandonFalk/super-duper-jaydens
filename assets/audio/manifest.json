@@ -1,0 +1,52 @@
+[
+  {
+    "file": "assets/audio/city-after-school.mp3",
+    "duration": 123.0,
+    "lead": "brass",
+    "meter": 4,
+    "bpm": 96.0,
+    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
+    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
+    "sha256": "cd90e2129bf970abfce84f0f494a8ceb85b2b77eddfe2836cd4eca218b1ddc91"
+  },
+  {
+    "file": "assets/audio/skyline-sketch.mp3",
+    "duration": 95.16,
+    "lead": "strings",
+    "meter": 6,
+    "bpm": 187.5,
+    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
+    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
+    "sha256": "8283bbc406dc5dcb991432f8426bb15a5b161bec7caf04d7eb320e42ae7fa5eb"
+  },
+  {
+    "file": "assets/audio/workshop-windows.mp3",
+    "duration": 114.36,
+    "lead": "guitar",
+    "meter": 4,
+    "bpm": 103.45,
+    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
+    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
+    "sha256": "4e76c852776ee97cb37ec98fdbee46fedd637536bf99ea3bed42724b549d2d65"
+  },
+  {
+    "file": "assets/audio/rooftop-daybreak.mp3",
+    "duration": 105.4,
+    "lead": "brass",
+    "meter": 4,
+    "bpm": 75.0,
+    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
+    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
+    "sha256": "8eafc91f25c59ac35b84ac5b6224c3219cf7c636a65b1d59b46c8b7af5cf0ca5"
+  },
+  {
+    "file": "assets/audio/a-city-made-together.mp3",
+    "duration": 45.24,
+    "lead": "brass",
+    "meter": 4,
+    "bpm": 90.91,
+    "mix": "Revised cinematic orchestral/electric palette; loudness normalized to -20 LUFS target and -2 dBTP ceiling.",
+    "origin": "Original score and synthesized recording created for Super Duper Jaydens. No samples or pre-existing melodies.",
+    "sha256": "81633e5e3afd34bd5ed573947d2568f249c4973edd9f85db5cb192e357590e3c"
+  }
+]
