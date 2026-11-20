@@ -81,3 +81,11 @@ Primary conceptual references checked November 20, 2026:
 - John Coleman and Daniel Vacanti, The Kanban Guide, May 2025: https://kanbanguides.org/the-kanban-guide . CC BY-SA 4.0. Linked for further study; no guide prose, diagrams, or exercise structure is reproduced. The game’s explanations, examples, and simulation structure are original. Its four-turn service target is illustrative, not a forecast derived from historical probabilities.
 
 The game introduces foundations. It does not grant a professional Kanban, Lean, Toyota, or MBA credential.
+
+## Version 1.2.0: agency and visible results
+
+All thirteen optional flavor detours were replaced with usable field-tool choices. Every tool has one use and a stated capability. Field jobs accept matching gear, one of two starting-gadget uses, a finite supply pack, an extra crew shift, or deferral. A ledger makes these resource choices persistent and allows alternative plans to be compared without duplicate spending.
+
+City upgrades alter later options. District delivery routes require specific links; the map bench increases reachable stops, the workshop recovers a supply pack, and the test bay recovers one delayed shift. Players allocate the final route and see delivered versus deferred stops per district. Their starting priority signal reserves one available stop in its district. The model makes trade-offs visible; these are fictional resource rules, not industrial performance claims.
+
+For early planning missions, a complete but flawed plan can now run. The team repairs its gaps, the repair time is recorded, and the final route changes. Results retain the player’s actual tested choices and explain each decision. Incomplete selections still require a complete plan. WIP and dependency constraints remain explicit workflow rules.

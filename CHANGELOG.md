@@ -1,5 +1,13 @@
 # Releases
 
+## 1.2.0
+
+- Replaced all thirteen flavor-only detours with visible, functional field-tool choices.
+- Added thirteen city field jobs, finite tools, supply packs, starting-gadget uses, crew-time trades, and deferral.
+- Added a persistent hero kit, actual upgrade states, route dependencies, and workshop/map/test-bay benefits.
+- Made complete early planning choices produce different rework results.
+- Added player-directed neighborhood deliveries, priority signals, and endings that reflect who actually receives service.
+
 ## 1.1.0
 
 - Replaced the letter tile with a Signal City crest, removed the home feature banner, and made the project-management purpose explicit.
