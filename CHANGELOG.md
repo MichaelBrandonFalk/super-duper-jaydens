@@ -1,5 +1,11 @@
 # Releases
 
+## 1.3.2
+
+- Added a prominent Download game button beside Play, with Windows, Mac, and Linux Mint clearly listed.
+- Added a highlighted Downloads link in the header, with a comfortable mobile layout.
+- Checked both links and verified layouts at desktop, tablet, and narrow mobile widths.
+
 ## 1.3.1
 
 - Clarified the installed app’s update screen and the macOS 13 minimum.

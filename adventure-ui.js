@@ -1,5 +1,5 @@
-import {finds,types,fieldJobs,gear,gearId,suppliesLeft,availableGear,fieldTotals,priorityDistrict,gadgetUsesLeft,districts,districtAccess,districtLimit,allocation} from './adventure.js?v=1.3.1';
-import {icon} from './art.js?v=1.3.1';
+import {finds,types,fieldJobs,gear,gearId,suppliesLeft,availableGear,fieldTotals,priorityDistrict,gadgetUsesLeft,districts,districtAccess,districtLimit,allocation} from './adventure.js?v=1.3.2';
+import {icon} from './art.js?v=1.3.2';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const symbols={reach:'target',scan:'spark',sort:'blocks',signal:'star',shelter:'cloud',carry:'switch',crew:'people',repair:'loop'};
 function toolIcon(item){return item.name==='Paper-bird drone'?'<svg viewBox="0 0 80 64" width="64" height="52" aria-hidden="true"><path d="m5 40 29-29 9 20 30-18-20 34-25-6-16 12 6-19Z" fill="#a7d6d1" stroke="#e9c78c" stroke-width="2"/><path d="m34 11-6 30 25 6-10-16" fill="none" stroke="#f6e5bf" stroke-width="2"/></svg>':icon(symbols[item.type],48);}

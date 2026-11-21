@@ -1,3 +1,3 @@
-import {finds,fieldJobs} from './adventure.js?v=1.3.1';
+import {finds,fieldJobs} from './adventure.js?v=1.3.2';
 export const detours=finds.map((pair,i)=>['Choose our field tool',pair[0][0],pair[0][2],pair[1][0],pair[1][2]]);
 export function rememberedDetour(id,p){if(id<2)return '';const job=p.fieldPlans?.[id-1];if(job?.done){const used=job.kind==='crew'?'an extra crew shift':job.kind==='supply'?'a supply pack':job.name;return 'We used '+used+' to open '+fieldJobs[id-2][3].toLowerCase()+'. '+fieldJobs[id-2][4];}if(job?.kind==='tomorrow')return 'We saved '+fieldJobs[id-2][0].toLowerCase()+' for tomorrow. Its city upgrade is still closed.';const choice=p.detours?.[id-1];return choice===undefined?'':finds[id-2][choice][0]+' is in our kit for a city job.';}

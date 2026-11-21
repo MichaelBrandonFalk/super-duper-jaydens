@@ -1,4 +1,4 @@
-import {cleanAdventure} from './adventure.js?v=1.3.1';
+import {cleanAdventure} from './adventure.js?v=1.3.2';
 export const projectCards=[['Build a city signal beacon',0],['Check our radios each day',1],['Map a new skyway',0],['Charge our radios each night',1]];
 export const needCards=['A clear path for wheels','A quiet recharge nook','Low signal controls','A giant spinning sign','A moon base'];
 export const scopeCards=['A gadget zone','A quiet recharge nook','A clear path','A moon base','A giant cake tower'];
