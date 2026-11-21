@@ -1,0 +1,1 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';import {Resvg} from '@resvg/resvg-js';await mkdir('build',{recursive:true});const svg=await readFile('assets/icon.svg','utf8');await writeFile('build/icon.png',new Resvg(svg,{fitTo:{mode:'width',value:1024},background:'#0b1423'}).render().asPng());

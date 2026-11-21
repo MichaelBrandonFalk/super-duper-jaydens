@@ -1,5 +1,13 @@
 # Releases
 
+## 1.3.0
+
+- Added a Downloads page, home link, and footer link with explicit desktop versions, file sizes, and checksums.
+- Added offline Windows Setup/portable editions, one universal Mac DMG, and Linux Mint .deb/AppImage packaging.
+- Added native startup, local save, audio, asset, and protocol-policy checks.
+- Added a tagged-release workflow that publishes downloads only after native checks and the Mint base installation check pass.
+- Added a single version-update command for future releases.
+
 ## 1.2.0
 
 - Replaced all thirteen flavor-only detours with visible, functional field-tool choices.

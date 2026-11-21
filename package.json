@@ -1,1 +1,26 @@
-{"name":"super-duper-jaydens","version":"1.2.0","private":true,"type":"module","scripts":{"start":"python3 -m http.server 4190","test":"node --test scripts/*.test.mjs","build":"node scripts/build.mjs"},"description":"A comic-book project-management adventure for little heroes and big ideas."}
+{
+  "name": "super-duper-jaydens",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 4190",
+    "test": "node --test scripts/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "desktop:icons": "node scripts/prepare-desktop-icon.mjs",
+    "desktop:build": "npm run build && npm run desktop:icons && electron-builder --publish never",
+    "desktop:check": "electron desktop/main.cjs --self-test",
+    "release:version": "node scripts/set-version.mjs"
+  },
+  "description": "A comic-book project-management adventure for little heroes and big ideas.",
+  "productName": "Super Duper Jaydens",
+  "author": "MichaelBrandonFalk",
+  "license": "UNLICENSED",
+  "main": "desktop/main.cjs",
+  "homepage": "https://michaelbrandonfalk.github.io/super-duper-jaydens/",
+  "devDependencies": {
+    "electron": "45.4.1",
+    "electron-builder": "26.18.0",
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

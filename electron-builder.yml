@@ -1,0 +1,65 @@
+appId: com.michaelbrandonfalk.superduperjaydens
+productName: Super Duper Jaydens
+asar: true
+npmRebuild: false
+forceCodeSigning: false
+directories:
+  output: desktop-release
+  buildResources: build
+files:
+  - desktop/**
+  - dist/**
+  - package.json
+extraMetadata:
+  main: desktop/main.cjs
+mac:
+  category: public.app-category.education
+  icon: build/icon.png
+  identity: '-'
+  hardenedRuntime: false
+  notarize: false
+  artifactName: Super-Duper-Jaydens-${version}-macOS-${arch}.${ext}
+  target:
+    - target: dmg
+      arch: [universal]
+dmg:
+  sign: false
+win:
+  icon: build/icon.png
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+nsis:
+  artifactName: Super-Duper-Jaydens-${version}-Windows-${arch}-Setup.exe
+  oneClick: true
+  perMachine: false
+  createDesktopShortcut: true
+  deleteAppDataOnUninstall: false
+portable:
+  artifactName: Super-Duper-Jaydens-${version}-Windows-${arch}-Portable.exe
+linux:
+  executableName: super-duper-jaydens
+  category: Education
+  icon: build/icon.png
+  maintainer: Michael Brandon Falk <michaelbrandonfalk@users.noreply.github.com>
+  artifactName: Super-Duper-Jaydens-${version}-Linux-x64.${ext}
+  target:
+    - target: deb
+      arch: [x64]
+    - target: AppImage
+      arch: [x64]
+deb:
+  depends:
+    - libgtk-3-0 | libgtk-3-0t64
+    - libnotify4
+    - libnss3
+    - libxss1
+    - libxtst6
+    - xdg-utils
+    - libatspi2.0-0 | libatspi2.0-0t64
+    - libuuid1
+    - libsecret-1-0
+    - libasound2 | libasound2t64
+    - libgbm1

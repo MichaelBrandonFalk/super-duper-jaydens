@@ -1,10 +1,10 @@
 import {cp,mkdir,rm,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 await rm('dist',{recursive:true,force:true});await mkdir('dist');
-for(const file of ['index.html','app.js','data.js','engine.js','operations.js','adventure.js','adventure-ui.js','art.js','audio.js','detours.js','style.css','hero-theme.css'])await cp(file,'dist/'+file);
+for(const file of ['index.html','downloads.json','version.js','release-data.js','downloads-ui.js','app.js','data.js','engine.js','operations.js','adventure.js','adventure-ui.js','art.js','audio.js','detours.js','style.css','hero-theme.css'])await cp(file,'dist/'+file);
 await cp('assets','dist/assets',{recursive:true,filter:path=>!path.endsWith('-original.png')&&!path.endsWith('.b64')});await cp('docs','dist/docs',{recursive:true});
 await writeFile('dist/.nojekyll','');
-const files=['app.js','data.js','engine.js','operations.js','adventure.js','adventure-ui.js','art.js','audio.js','detours.js','style.css','hero-theme.css'];
+const files=['version.js','release-data.js','downloads-ui.js','app.js','data.js','engine.js','operations.js','adventure.js','adventure-ui.js','art.js','audio.js','detours.js','style.css','hero-theme.css'];
 const hashes=Object.fromEntries(await Promise.all(files.map(async f=>[f,createHash('sha256').update(await readFile(f)).digest('hex')])));
-await writeFile('dist/build-info.json',JSON.stringify({version:'1.2.0',files:hashes},null,2)+'\n');
+await writeFile('dist/build-info.json',JSON.stringify({version:JSON.parse(await readFile('package.json','utf8')).version,files:hashes},null,2)+'\n');
 console.log('Static game built in dist/. No external scripts, fonts, or media.');

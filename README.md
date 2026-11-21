@@ -46,3 +46,7 @@ Every mission has a field job and a choice of two single-use tools. Tools can so
 Thirteen visible upgrades open the city. District routes depend on specific working links. The map bench opens fourth stops, the workshop recovers a supply pack, and the test bay recovers a shift. Complete early workshop plans can also produce rework instead of requiring a prescribed answer. Players assign available route slots across three neighborhoods and see which deliveries arrive or wait until tomorrow. The initial priority signal reserves an available first stop in its neighborhood.
 
 Replanning replaces a saved decision and releases its former resources; it does not create duplicate tools or spend supplies twice. Existing progress remains saved.
+
+## Download and desktop releases
+
+[Download for Windows, Mac, or Linux Mint](https://michaelbrandonfalk.github.io/super-duper-jaydens/#download). Installers, portable options, and checksums use explicit version numbers. The native app includes the game’s local artwork and credited music. See [desktop build and release instructions](docs/DESKTOP.md).

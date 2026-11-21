@@ -1,0 +1,114 @@
+name: Build and publish desktop downloads
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  desktop:
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: windows
+            args: --win --x64
+          - os: macos-latest
+            platform: macos
+            args: --mac --universal
+          - os: ubuntu-22.04
+            platform: linux
+            args: --linux --x64
+    runs-on: ${{ matrix.os }}
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm exec -- install-electron --no
+      - run: npm test
+      - run: npm run desktop:build -- ${{ matrix.args }}
+      - if: runner.os != 'Linux'
+        run: node scripts/desktop-smoke.mjs
+      - if: runner.os == 'Linux'
+        run: xvfb-run -a node scripts/desktop-smoke.mjs
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: desktop-${{ matrix.platform }}
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+          path: |
+            desktop-release/*.exe
+            desktop-release/*.dmg
+            desktop-release/*.AppImage
+            desktop-release/*.deb
+  mint-base:
+    timeout-minutes: 15
+    needs: desktop
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: desktop-linux
+          path: packages
+      - name: Install on the Linux Mint 22 Ubuntu base
+        shell: bash
+        run: |
+          mkdir /tmp/jaydens-empty-sources
+          cat > /tmp/jaydens-ubuntu.list <<'SOURCES'
+          deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://archive.ubuntu.com/ubuntu noble main universe restricted multiverse
+          deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://archive.ubuntu.com/ubuntu noble-updates main universe restricted multiverse
+          deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://security.ubuntu.com/ubuntu noble-security main universe restricted multiverse
+          SOURCES
+          options=(-o Dir::Etc::sourcelist=/tmp/jaydens-ubuntu.list -o Dir::Etc::sourceparts=/tmp/jaydens-empty-sources -o Acquire::Retries=1 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20)
+          sudo apt-get "${options[@]}" -o APT::Update::Error-Mode=any update
+          sudo apt-get "${options[@]}" install -y ./packages/*.deb
+      - name: Test the installed offline game
+        run: xvfb-run -a super-duper-jaydens --self-test
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    timeout-minutes: 15
+    needs: [desktop, mint-base]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          pattern: desktop-*
+          merge-multiple: true
+          path: packages
+      - name: Publish tested files and update the website catalog
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          version="${TAG#v}"
+          node scripts/publish-downloads.mjs packages "$version"
+          gh release view "$TAG" || gh release create "$TAG" --title "Super Duper Jaydens! $TAG" --notes "Offline Windows, universal Mac DMG, and Linux Mint downloads. Each file includes its version. All packages passed the native startup checks and the Linux package passed the Mint 22 base installation check. See the game’s download page for installation and update information."
+          gh release upload "$TAG" packages/*
+          current="$(node -p 'JSON.parse(require("fs").readFileSync("package.json")).version')"
+          if [[ "$current" == "$version" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add downloads.json
+            git diff --cached --quiet || git commit -m "Publish tested desktop downloads for $TAG"
+            git push origin HEAD:main
+            gh api "repos/$GH_REPO/pages/builds" --method POST
+          fi

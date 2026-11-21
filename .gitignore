@@ -7,3 +7,6 @@ dist/
 assets/*-original.png
 assets/art/*-original.png
 assets/*.b64
+
+desktop-release/
+build/icon.png

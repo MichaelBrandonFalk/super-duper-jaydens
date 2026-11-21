@@ -1,0 +1,4 @@
+import {readFile,writeFile,stat} from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {artifactDefinitions,validateDownloads} from '../release-data.js';
+const [folder,version]=process.argv.slice(2);if(!folder||!/^\d+\.\d+\.\d+$/.test(version||''))throw Error('Pass package directory and release version');
+const files=[];for(const definition of artifactDefinitions(version)){const file=path.join(folder,definition.file),bytes=(await stat(file)).size,sha256=createHash('sha256').update(await readFile(file)).digest('hex');files.push({...definition,bytes,sha256});}
+const manifest={version,files};if(!validateDownloads(manifest))throw Error('Downloads did not validate');await writeFile('downloads.json',JSON.stringify(manifest,null,2)+'\n');await writeFile(path.join(folder,'SHA256SUMS.txt'),files.map(f=>f.sha256+'  '+f.file).join('\n')+'\n');console.log('Prepared complete download manifest for '+version);
