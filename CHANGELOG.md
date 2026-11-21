@@ -1,5 +1,10 @@
 # Releases
 
+## 1.3.1
+
+- Clarified the installed app’s update screen and the macOS 13 minimum.
+- First published desktop package set, with native startup checks and Mint-base installation validation.
+
 ## 1.3.0
 
 - Added a Downloads page, home link, and footer link with explicit desktop versions, file sizes, and checksums.
