@@ -1,6 +1,6 @@
 export function artifactDefinitions(version){const prefix=`Super-Duper-Jaydens-${version}`;return [
  {id:'windows',platform:'Windows',format:'64-bit installer',file:`${prefix}-Windows-x64-Setup.exe`,primary:true},
- {id:'mac',platform:'Mac',format:'Universal DMG · Apple silicon and Intel',file:`${prefix}-macOS-universal.dmg`,primary:true},
+ {id:'mac',platform:'Mac',format:'macOS 13+ · Universal DMG · Apple silicon and Intel',file:`${prefix}-macOS-universal.dmg`,primary:true},
  {id:'mint',platform:'Linux Mint',format:'64-bit .deb installer',file:`${prefix}-Linux-x64.deb`,primary:true},
  {id:'windows-portable',platform:'Windows portable',format:'64-bit · no installation',file:`${prefix}-Windows-x64-Portable.exe`,primary:false},
  {id:'linux-portable',platform:'Linux portable',format:'64-bit AppImage',file:`${prefix}-Linux-x64.AppImage`,primary:false}
