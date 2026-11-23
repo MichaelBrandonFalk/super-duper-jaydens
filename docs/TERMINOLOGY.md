@@ -1,6 +1,6 @@
 # Consistent learning context
 
-Current web wording: v1.4.7, reviewed November 23, 2026.
+Current web wording: v1.4.8, reviewed November 23, 2026.
 
 The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
@@ -33,3 +33,5 @@ Saving an experiment is different from adopting its change. Use Save our test re
 Result summaries name the actual missing needs, unwanted extras, overloaded helper and hours, or failed risk response. Do not count unwanted ideas as extra hub parts. Needs reviews state whether an item was added or left off. Change our plan preserves answers in editable activities; Try this activity again starts a fresh board, quality, or launch run while retaining the saved result.
 
 Neighbor notes can be closed without forgetting they were read. A saved result is replaced when the new activity is finished, not merely when a trial runs. Scheduling reviews explain the dependency as well as the position. The rover budget has 4 tokens, a 3-token panel, and 3-token stars: buying stars leaves 1 token and a 2-token panel shortfall. Early finale scenes review designs and schedules; construction precedes the printer and handover scenes. Replaying a lesson must not undo a completed ending or a chosen first visit. Clear scene announcements when navigating to a different page.
+
+Selected options are stable: tapping the same change, printer response, or improvement choice must not erase approval, test rounds, or test feedback. A genuinely different selection requires new checks. Test again explicitly starts new improvement trials while keeping the chosen change and the last saved result. Prompts distinguish an unselected change from one already selected.

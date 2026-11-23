@@ -1,3 +1,10 @@
+# v1.4.8 · Stable choices and explicit retesting
+
+- Tapping an already selected improvement, printer response, or scope choice preserves its trials, checks, and agreement. Selecting a different option still requires fresh checks.
+- Test again explicitly starts new improvement trials while retaining the selected change and the last saved result.
+- The improvement prompt says when the change is already selected instead of asking players to choose again.
+- Desktop releases remain paused.
+
 # v1.4.7 · Four-pass clarity review
 
 - Neighbor-note buttons now open and close while retaining read history and selections, including after reload.

@@ -1,4 +1,4 @@
-import {cityMoments,neighborhoods,momentResult,firstVisitOrder} from './city-story.js?v=1.4.7';
+import {cityMoments,neighborhoods,momentResult,firstVisitOrder} from './city-story.js?v=1.4.8';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function cityProgress(p){return `<div class="city-readout"><strong>${p.done.length} of 13 learning activities finished</strong><a href="#book">Open our plan book</a></div>`;}
 export function fieldView(p,id){const m=cityMoments[id-1],n=p.storyChoices?.[id];return `<section class="field-case" data-read aria-label="A choice in our story"><p class="tiny-label">A CHOICE IN OUR STORY</p><h2>${esc(m.title)}</h2><p>${esc(m.text)}</p><div class="row-options">${m.choices.map(([label],i)=>`<button class="option" data-city-choice="${i}" aria-pressed="${n===i}">${esc(label)}</button>`).join('')}</div>${momentResult(p,id)?`<div class="field-payoff" role="status" tabindex="-1"><p>${esc(momentResult(p,id))}</p></div>`:''}</section>`;}

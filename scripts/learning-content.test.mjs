@@ -59,3 +59,14 @@ test('closing a neighbor note keeps the read history and selected requirements t
 test('scheduling review connects a misplaced step to its dependency',()=>{
  const g=newActivity(5);g.order=[2,0,1,3];const rows=feedbackFor(5,g);assert.equal(rows[0].ok,false);assert.match(rows[0].text,/step 1.*step 3.*Test the path before opening/);assert.match(rows[2].text,/built before it can be tested/);
 });
+
+test('reselecting a current plan option retains tests, approval, and feedback; changing it requires new checks',async()=>{
+ const {selectPlanOption}=await import('../engine.js');
+ for(const [id,kind,current,next] of [[10,'quality',0,1],[11,'change',2,0],[12,'layout',1,0]]){
+  const g=help(id,newActivity(id));g.checked=true;g.feedback='Recorded test feedback.';const before=structuredClone(g);
+  assert.equal(selectPlanOption(g,kind,current),false);assert.deepEqual(g,before);
+  assert.equal(selectPlanOption(g,kind,99),false);assert.deepEqual(g,before);
+  assert.equal(selectPlanOption(g,kind,next),true);assert.equal(g.checked,false);assert.equal(g.feedback,'');
+  if(kind==='quality')assert.equal(g.qualityKey,false);if(kind==='change')assert.equal(g.approved,false);if(kind==='layout'){assert.deepEqual(g.rounds,[]);assert.equal(g.trips,null);}
+ }
+});
