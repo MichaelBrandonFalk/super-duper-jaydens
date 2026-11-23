@@ -47,3 +47,15 @@ test('a quality improvement saves rework time without cancelling agreed new scop
  p.reports[6]={delay:1,story:'Overloaded work.'};assert.equal(cityOutcome(p).recovered,1);assert.equal(cityOutcome(p).stops,10);
  p.fieldPlans[1]={done:true,kind:'crew',delay:1};assert.equal(cityOutcome(p).stops,9);
 });
+
+test('closing a neighbor note keeps the read history and selected requirements through reload',async()=>{
+ const {toggleNeighborNote}=await import('../engine.js');const p=freshProgress(),g=newActivity(2);p.games[2]=g;
+ for(let i=0;i<3;i++){assert.equal(toggleNeighborNote(g,i),true);g.picks[i]=1;assert.equal(toggleNeighborNote(g,i),true);}
+ assert.deepEqual(g.openNotes,[]);assert.deepEqual(g.seen,[0,1,2]);assert.equal(evaluate(2,g).ok,true);
+ const restored=cleanProgress(JSON.parse(JSON.stringify(p))).games[2];assert.deepEqual(restored.openNotes,[]);assert.deepEqual(restored.picks,g.picks);assert.equal(evaluate(2,restored).ok,true);
+ assert.equal(toggleNeighborNote(restored,5),false);assert.deepEqual(restored.openNotes,[]);
+ const older=help(2,newActivity(2));delete older.openNotes;p.games[2]=older;assert.deepEqual(cleanProgress(p).games[2].openNotes,[0,1,2]);
+});
+test('scheduling review connects a misplaced step to its dependency',()=>{
+ const g=newActivity(5);g.order=[2,0,1,3];const rows=feedbackFor(5,g);assert.equal(rows[0].ok,false);assert.match(rows[0].text,/step 1.*step 3.*Test the path before opening/);assert.match(rows[2].text,/built before it can be tested/);
+});

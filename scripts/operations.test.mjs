@@ -18,7 +18,7 @@ test('saved plan records distinguish the player’s actual risk, replenishment, 
 test('all five finale choices retain their own outcome and repair explanation',async()=>{
  const {artifact,finalRepairs}=await import('../engine.js');
  for(const correct of [true,false]){const g=newActivity(13);for(const a of finalActs)finalChoice(g,correct?a.right:1-a.right);const rows=feedbackFor(13,g);assert.equal(rows.length,5);rows.forEach((r,i)=>{assert.equal(r.ok,correct);assert.equal(r.text,correct?finalActs[i].why:finalRepairs[i]);assert.ok(artifact(13,g).includes(finalActs[i].options[g.answers[i]]));});}
- assert.match(finalRepairs[2],/three more tokens/);
+ assert.match(finalRepairs[2],/2 more tokens/);
 });
 
 test('saved review stays attached to its tested plan while a replacement is unfinished',async()=>{
@@ -64,4 +64,11 @@ test('capacity results identify the overloaded helper and compare planned work w
 });
 test('risk results explain only the responses that failed and agree with each review',()=>{
  for(let i=0;i<3;i++){const g=help(9,newActivity(9));g.picks[i]=1-g.picks[i];const result=missionResult(9,g),failed=feedbackFor(9,g).filter(r=>!r.ok);assert.equal(failed.length,1);assert.ok(result.story.endsWith(failed[0].text));if(i===2){assert.match(result.story,/Giving him every job/);assert.doesNotMatch(result.story,/backup is missing|parts get wet|stops every job/);}}
+});
+
+test('the rover budget repair uses the remaining token and identifies the actual shortfall',async()=>{
+ const {roverBudget,finalRepairs}=await import('../engine.js');const remaining=roverBudget.total-roverBudget.stars,shortfall=roverBudget.panel-remaining;
+ assert.equal(remaining,1);assert.equal(shortfall,2);assert.match(finalActs[2].story,/4 tokens.*3 tokens/);assert.match(finalRepairs[2],/Only 1 token is left/);assert.match(finalRepairs[2],/Finding 2 more tokens/);assert.match(finalRepairs[2],/no reserve/);
+ const raw=freshProgress();raw.done=[13];raw.reports[13]={delay:1,story:'A plan needed repair.',checks:[{ok:false,label:'A plan that fits our team',text:'The crew gives the control-panel job to Mika. After spending the panel money on stars, the team must find three more tokens before it can buy the panel.'}]};
+ assert.equal(cleanProgress(raw).reports[13].checks[0].text,finalRepairs[2]);
 });

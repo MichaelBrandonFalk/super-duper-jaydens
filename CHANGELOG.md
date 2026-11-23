@@ -1,3 +1,13 @@
+# v1.4.7 · Four-pass clarity review
+
+- Neighbor-note buttons now open and close while retaining read history and selections, including after reload.
+- Scheduling reviews explain dependencies and misplaced step positions. Plan-book text distinguishes running a trial from finishing and saving a new result.
+- Corrected the finale budget shortfall: spending 3 of 4 tokens leaves 1, so the 3-token panel needs 2 more. Questions and feedback share the same cost data; known incorrect saved explanations are corrected.
+- Finale design and schedule reviews precede construction. Neighbors steer the rover in the handover scene. Hub quality work refers to the hub opening rather than an unexplained launch.
+- Earlier lesson replays preserve the completed ending and visit order. Older saves affected by the cleared launch flag recover their ending. Previous scene announcements clear on page navigation.
+- The ending explicitly says the launch project is finished.
+- Four sequential review passes completed; the fourth found no further actionable clarity issues in the checked flows. Desktop releases remain paused.
+
 # v1.4.6 · Concrete consequences and easier corrections
 
 - Needs results list missing requirements and unrequested extras instead of counting them as extra hub parts. Reviews say whether each item was added or left off.
