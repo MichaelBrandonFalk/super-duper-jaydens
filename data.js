@@ -329,7 +329,7 @@ export const missions=[
     "color": "blue",
     "lead": "Mika",
     "story": [
-      "At Little Better Lab, Bolt uses a scanner to check printed directions before the city crews use them. The scanner sits on his workbench. The stack of cards is across the room, so he keeps rolling back and forth. In each of two test rounds, he makes eight trips.",
+      "At Little Better Lab, Bolt uses a scanner to check printed directions before the city crews use them. The scanner sits on his workbench. The stack of cards is across the room, so he keeps rolling back and forth. Each test round checks the same number of cards. We count trips to fetch cards and carry checked cards to a tray. Before the change, Bolt makes eight trips in each of two rounds.",
       "Mika watches beside him. “Let us try a change and count the trips again,” she says. Bolt smiles. He would like the job to take less walking and rolling, without anyone having to hurry."
     ],
     "lesson": "Kaizen is a Japanese word for improvement. We improve the way the work is done, try the change, and check what happened.",

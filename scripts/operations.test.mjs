@@ -35,3 +35,10 @@ test('activity art uses the same hour trade-off and budget facts as the activity
  const {issueArt}=await import('../art.js');const g=help(11,newActivity(11));g.change=0;assert.match(issueArt(11,{},g),/hub opens 2 hours later/);assert.doesNotMatch(issueArt(11,{},g),/shifts/);
  const b=help(7,newActivity(7));b.budget=[1,1,1,2];const html=issueArt(7,{},b);assert.match(html,/3 tokens over budget/);assert.doesNotMatch(html,/RESERVE|-3 tokens/);
 });
+
+test('sending every delivery does not hide an empty or excessive final buffer',()=>{
+ for(const [choices,stock,ok] of [[[1,2,1,0],0,false],[[1,2,1,2],2,true],[[1,2,1,3],3,false]]){
+  const g=help(8,newActivity(8));g.flowChoices=choices;const f=flowState(choices),result=missionResult(8,g);assert.equal(f.served,6);assert.equal(f.stock,stock);assert.equal(result.ready,true);assert.equal(feedbackFor(8,g).find(r=>r.label==='Stock').ok,ok);assert.match(result.story,new RegExp(stock+' boxes ready for next time'));
+  if(stock===0)assert.match(result.story,/needs 2 more boxes before the next visit/);if(stock===3)assert.match(result.story,/packed more than we need/);
+ }
+});

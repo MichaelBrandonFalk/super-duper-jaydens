@@ -1,3 +1,13 @@
+# v1.4.3 · Clear rules and consequences
+
+- Kanban results distinguish completed deliveries from an empty, full, or excessive final buffer. Instructions explain why the last practice round still replenishes stock.
+- Finale choices state available time and the control-panel spending explicitly.
+- Printer practice names the six-card batch before the decision and clears old feedback when the response changes.
+- Work assignment changes clear stale messages; finishing the work board points to the library activity.
+- Budget summaries distinguish planned reserve from money used during the test, with singular token labels corrected.
+- Improvement practice explains which trips are counted and keeps the number of cards consistent between rounds.
+- Desktop releases remain paused.
+
 # v1.4.2 · Story order and saved-result clarity
 
 - Early scenes try the Clear path drawing and job cards before parts are bought; the team rests on a garage bench. Building happens before the quality checks.
