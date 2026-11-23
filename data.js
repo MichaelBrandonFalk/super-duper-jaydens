@@ -147,7 +147,7 @@ export const missions=[
     "color": "gold",
     "lead": "Bolt",
     "story": [
-      "At Clockwork Walk, the team plans how to build the Clear path. Bolt points to a sign that says OPEN. Mika looks at the panels still on the workbench. “First, we need to build it!”",
+      "At Clockwork Walk, the team plans how to build the Clear path. The crew will buy any other parts after making a budget. Bolt points to a sign that says OPEN. Mika points to the drawing. “First, we need a plan for building it!”",
       "Jayden sets out four job cards: Draw the Clear path plan. Build the Clear path. Test the Clear path. Open the Clear path. “A neighbor cannot try the whole path until the panels are in place,” he says."
     ],
     "lesson": "A dependency means one job needs another job to happen first. A schedule puts jobs in a working order and plans when to do them.",
@@ -277,7 +277,7 @@ export const missions=[
     "color": "gold",
     "lead": "Mika",
     "story": [
-      "At the Test Deck, Jayden sees the new hub shine. “Is it ready?” Mika brings the three requirements. “Let us test the Clear path, Message desk, and Quiet space.”",
+      "With the plan and budget ready, the crew has built the three parts of the hub. At the Test Deck, Jayden sees them shine. “Is it ready?” Mika brings the three requirements. “Let us test the Clear path, Message desk, and Quiet space.”",
       "A box blocks the Clear path. The Message desk’s buttons are too far back. A loud radio is playing beside the Quiet space. Bolt opens his tool box. “We can fix each problem, then check it again.”"
     ],
     "lesson": "Quality means our work meets the agreed needs. Jidoka means a machine or worker can spot a fault and stop work before more faulty items are made.",
@@ -304,10 +304,10 @@ export const missions=[
     "lead": "Jayden",
     "story": [
       "At the Switchboard, a neighbor asks for a landing pad where a small delivery drone can bring messages. “That could help!” says Jayden. “How would it change our plan?”",
-      "Mika checks the work and budget. Adding the landing pad now takes two extra hours, so the launch will be later. Saving it for a new project adds no time to the current project. The team must agree on which result matters more."
+      "Mika checks the work and budget. The crew already has the parts for the landing pad. Building it takes two extra hours, so the hub will open two hours later. Saving it for a new project adds no time to the current project. The team must agree on which result matters more."
     ],
     "lesson": "Change control means checking a new request before agreeing to change the plan. A trade-off means gaining one thing while giving up another.",
-    "example": "Adding the landing pad now is a trade-off: we gain a landing pad, but the launch takes two extra hours. We can also save the landing pad for a later project. Either choice needs agreement.",
+    "example": "Adding the landing pad now is a trade-off: we gain a landing pad, but the hub opens two hours later. We can also save the landing pad for a later project. Either choice needs agreement.",
     "task": "Try a change at the switchboard",
     "instruction": "Choose a plan and read what it changes. Tap Agree this plan with our neighbors. Then tap Try our plan to see its result.",
     "win": "Our new plan is clear. Everyone knows what changed and what stayed.",

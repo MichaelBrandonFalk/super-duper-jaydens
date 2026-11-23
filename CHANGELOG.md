@@ -1,3 +1,12 @@
+# v1.4.2 · Story order and saved-result clarity
+
+- Early scenes try the Clear path drawing and job cards before parts are bought; the team rests on a garage bench. Building happens before the quality checks.
+- The landing-pad trade-off explicitly delays the hub opening by two hours, with parts already available. The rover launch remains a separate final project.
+- Replaced abbreviated and misleading art captions, including shifts versus hours and negative reserve amounts. Story and saved-result art no longer display current replay counters.
+- Saved review explanations stay with the tested plan through unfinished replays and reloads.
+- The kanban working example now records starts and finishes, so its flow measurements match its completed board.
+- Desktop releases remain paused.
+
 # v1.4.1 · Web clarity pass
 
 - Clarified the order of library deliveries and replacement packing, and when delayed boxes arrive.

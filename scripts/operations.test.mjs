@@ -20,3 +20,18 @@ test('all five finale choices retain their own outcome and repair explanation',a
  for(const correct of [true,false]){const g=newActivity(13);for(const a of finalActs)finalChoice(g,correct?a.right:1-a.right);const rows=feedbackFor(13,g);assert.equal(rows.length,5);rows.forEach((r,i)=>{assert.equal(r.ok,correct);assert.equal(r.text,correct?finalActs[i].why:finalRepairs[i]);assert.ok(artifact(13,g).includes(finalActs[i].options[g.answers[i]]));});}
  assert.match(finalRepairs[2],/three more tokens/);
 });
+
+test('saved review stays attached to its tested plan while a replacement is unfinished',async()=>{
+ const {savedFeedback}=await import('../operations.js');const {artifact}=await import('../engine.js');
+ const p=freshProgress(),g=help(11,newActivity(11));g.change=0;g.checked=true;p.done=[11];p.games[11]=g;p.plans[11]=artifact(11,g);const result=missionResult(11,g);p.reports[11]={delay:result.delay,story:result.story,checks:result.checks};
+ p.games[11]=newActivity(11);p.games[11].change=2;p.games[11].checked=true;
+ const reloaded=cleanProgress(JSON.parse(JSON.stringify(p)));assert.deepEqual(savedFeedback(reloaded,11),result.checks);assert.match(savedFeedback(reloaded,11)[0].text,/hub opens two hours later/);assert.equal(reloaded.games[11].change,2);
+ delete reloaded.reports[11].checks;assert.deepEqual(savedFeedback(reloaded,11),[]);
+});
+test('the kanban working example records real start and finish times for all four jobs',()=>{
+ const g=help(8,newActivity(8));assert.equal(g.boardClock,8);assert.equal(Object.keys(g.started).length,4);assert.equal(Object.keys(g.finished).length,4);for(let i=0;i<4;i++)assert.ok(g.finished[i]>g.started[i]);
+});
+test('activity art uses the same hour trade-off and budget facts as the activity',async()=>{
+ const {issueArt}=await import('../art.js');const g=help(11,newActivity(11));g.change=0;assert.match(issueArt(11,{},g),/hub opens 2 hours later/);assert.doesNotMatch(issueArt(11,{},g),/shifts/);
+ const b=help(7,newActivity(7));b.budget=[1,1,1,2];const html=issueArt(7,{},b);assert.match(html,/3 tokens over budget/);assert.doesNotMatch(html,/RESERVE|-3 tokens/);
+});
