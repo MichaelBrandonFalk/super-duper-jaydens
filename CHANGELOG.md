@@ -1,5 +1,13 @@
 # Releases
 
+## 1.3.4
+
+- Gave the beacon, relay, signal desk, workbench, map table, and test bench distinct, consistent roles.
+- Matched the scope, work lists, budget, and quality checks to the same hub parts.
+- Distinguished job cards, kanban cards, printed route cards, and parts packs.
+- Rewrote city-job descriptions and results to describe the same object and action.
+- Updated legacy saved wording while preserving choices, costs, progress, and unfinished replays.
+
 ## 1.3.3
 
 - Reviewed all thirteen stories, lessons, examples, instructions, and results for clarity and cohesion.
