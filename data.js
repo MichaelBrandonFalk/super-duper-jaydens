@@ -1,28 +1,375 @@
 export const title='Super Duper Jaydens!';
 export const crew=[{id:'jayden',name:'Jayden',skill:'Big pictures and bright signs',capacity:3},{id:'mika',name:'Mika',skill:'Making things fit together',capacity:3},{id:'bolt',name:'Bolt',skill:'Steady wheels and small parts',capacity:2}];
 export const opening=[
- {title:'A city with a new signal',speaker:'JAYDEN',text:['In Signal City, the windows shine like little stars. Jayden can leap over a puddle, draw a giant arrow, and find a good snack in almost any bag. But the best hero trick is helping a friend.','Tonight, Signal City has a big new plan: a Hero Hub where neighbors can send a message, test a useful gadget, and find help. Jayden has a cape. Mika has a tool box. Bolt, their little robot, has brought seven spoons. “I thought this was a soup meeting,” says Bolt.']},
- {title:'Even heroes need a plan',speaker:'MIKA',text:['“We could build it all right now!” says Jayden. Mika opens her book. “First, what do our neighbors need? What can we make with our time and tools?”','A project is something new we make, with a start and an end. The Hero Hub is our project. We will learn one useful trick in each part of the city. Then we will put our ideas together. The rover has time for 12 stops on launch day. Each extra workshop shift uses one route slot. Our choices can save time or create delays. The city needs a very good team.']},
- {title:'Make this city yours',speaker:'YOUR TEAM',text:['You are part of the Super Duper Jaydens. Pick a signal color for our team and a little helper gadget. Our signal picks which neighborhood gets its first available delivery slot. Our gadget can solve two field jobs.','We will read a story, learn one small idea, then try it with our hands. Our book will keep the plans we try. Our kit starts with five supply packs. We can open city links with tools, supplies, or extra crew shifts. An extra shift uses one delivery slot. You can stop whenever you like. The city will wait.']}
+  {
+    "title": "A city with a new signal",
+    "speaker": "JAYDEN",
+    "text": [
+      "In Signal City, the windows shine like little stars. Jayden can leap over a puddle, draw a giant arrow, and find a good snack in almost any bag. But the best hero trick is helping a friend.",
+      "Tonight, Signal City has a big new plan: a Hero Hub where neighbors can send a message, test a useful gadget, and find help. Jayden has a cape. Mika has a tool box. Bolt, their little robot, has brought seven spoons. “I thought this was a soup meeting,” says Bolt."
+    ]
+  },
+  {
+    "title": "Even heroes need a plan",
+    "speaker": "MIKA",
+    "text": [
+      "“We could build it all right now!” says Jayden. Mika opens her book. “First, what do our neighbors need? What can we make with our time and tools?”",
+      "A project makes something new and has a start and an end. Our first project is the Hero Hub. We will learn how to plan it, build it, and check that it works for our neighbors. Later, we will launch a Signal Rover, a small vehicle that makes deliveries around the city."
+    ]
+  },
+  {
+    "title": "Make this city yours",
+    "speaker": "YOUR TEAM",
+    "text": [
+      "You are part of the Super Duper Jaydens. Choose a signal color and a helper gadget below. The color picks which neighborhood gets the first delivery when its route is ready. The gadget can help with two city jobs.",
+      "Each issue has a story, a lesson, a plan to try, and a city job. Choose a tool in the lesson, then use it on a job when it fits. Our kit also has five supply packs.",
+      "The rover has time for twelve stops on launch day. A shift is one block of work time. Each extra shift leaves time for one fewer stop. We will show what each choice changes. You can take a break at any time."
+    ]
+  }
 ];
 export const missions=[
- {id:1,place:'Signal Roof',title:'A spark worth making',tag:'START WITH A PURPOSE',kind:'sort',icon:'spark',color:'gold',lead:'Jayden',story:['Jayden looks across the empty roof. “A signal beacon!” he says. “A way for neighbors to reach our new Hero Hub.” Bolt holds up a broom. “Is sweeping a hero project too?”','Mika draws two boxes. One is for a new thing with a finish. The other is for a job we do again and again. Both matter. They just need different plans.'],lesson:'A project makes something new and has a finish. A daily job keeps things going.',example:'Building a new signal station is a project. Checking our radios each day is a daily job.',task:'Give each job a home',instruction:'Tap Project or Daily job beside each card. You can change your mind.',win:'Building our new hub is a project. We can name its finish, then plan how to get there.',keepsake:'A project has a purpose and a finish.',adult:{term:'Project versus operations',text:'A temporary, goal-directed undertaking differs from continuing operations. The hub is the project; daily care after handover is an operational responsibility.',mba:'Strategy and operations: connect the proposed outcome to a real need, then define where project responsibility ends.',source:'watt2'}},
- {id:2,place:'Neighbor Station',title:'A hero with good ears',tag:'LISTEN BEFORE YOU BUILD',kind:'needs',icon:'people',color:'teal',lead:'Mika',story:['At the station, three neighbors draw their wishes. One uses wheels. One needs a quiet place to recharge. One needs to reach the signal controls without a stretch.','Jayden starts drawing a very high control desk. Then he looks at the wishes. “Ah. My first idea did not fit everyone.” Mika smiles. “That is why we asked.”'],lesson:'Ask the people who will use your project what they need.',example:'A bright sign is useful. A path people can use is needed too. We can check both before we build.',task:'Build our needs list',instruction:'Open each neighbor’s note, then keep the three things they asked for.',win:'Our hub has a clear path, a quiet spot, and low gadget controls. Listening changed the plan.',keepsake:'The people who use a project help define success.',adult:{term:'Stakeholders and requirements',text:'The people affected by a project help define useful outcomes and acceptance criteria. Access needs belong in scope from the start, not in an optional wish list.',mba:'Stakeholder engagement and customer value: distinguish the team’s preferred solution from what users actually need.',source:'watt2'}},
- {id:3,place:'The Blue Room',title:'A promise we can keep',tag:'CHOOSE THE FINISH',kind:'scope',icon:'target',color:'blue',lead:'Jayden',story:['The Blue Room has a wall for big ideas. Jayden draws low gadget controls, a quiet recharge nook, and a path. Bolt draws a moon base beside them.','“A moon base would be fun,” says Mika. “Can we build it for this hub with the things we have?” Bolt studies his seven spoons. “Maybe the moon can wait.”'],lesson:'Scope means the work we agree to do. We can keep other ideas for later.',example:'For this hub, we promise a gadget zone, a quiet recharge nook, and a clear path. A moon base is a new project.',task:'Draw a line around our promise',instruction:'Keep the three things our neighbors need. Put the other ideas in Later.',win:'A clear promise helps everyone know what to build and when we are done.',keepsake:'Agree on what is in, what is out, and what done looks like.',adult:{term:'Scope and acceptance criteria',text:'Scope describes agreed deliverables and boundaries. Acceptance criteria make completion observable. A request can be valuable while still sitting outside the current approved scope.',mba:'Project charter and governance: establish the intended benefit, boundaries, sponsor agreement, and acceptance conditions.',source:'watt2'}},
- {id:4,place:'Gear Works',title:'Build the hero kit',tag:'BREAK IT DOWN',kind:'group',icon:'blocks',color:'coral',lead:'Mika',story:['Mika puts a model of the Hero Hub on the bench. Jayden points to its route, gear bay, and recharge nook. “Building a whole base is a very big job.”','“Then let us make it smaller,” says Mika. They give the path, gadget bench, and quiet recharge nook their own work cards. Bolt puts a spoon on each pile. “Now the piles have hats.”'],lesson:'Break a big project into small jobs that make its parts.',example:'Build a signal becomes: draw a plan, fit the parts, and test the code. Small jobs are easier to share.',task:'Fill the work shelves',instruction:'Each card has three shelf buttons. Tap the shelf that needs that job.',win:'The work is easier to see. Now we can find missing pieces and share jobs.',keepsake:'Small work pieces help a team plan the whole result.',adult:{term:'Work breakdown structure',text:'Decompose deliverables into manageable work packages. Grouping deliverables makes completeness and ownership visible before detailed scheduling.',mba:'Operations design: decompose an outcome before estimating effort or assigning accountability.',source:'watt2'}},
- {id:5,place:'Clockwork Walk',title:'What comes first?',tag:'MAKE THE ORDER WORK',kind:'order',icon:'clock',color:'gold',lead:'Bolt',story:['Bolt has found the beacon switch. “Shall I turn it on?” Jayden looks at the relay parts still on the bench. “Let us build it first!”','Mika lays out four cards. Draw the signal plan. Build the relay. Test the relay. Then switch on the beacon. “A test needs something built to test,” she says.'],lesson:'Some jobs must wait for another job. Put those jobs in an order that works.',example:'Build the relay before testing it. Switch on the beacon after the relay passes its test.',task:'Build a path through the jobs',instruction:'Use Up and Down to move the cards. Then try the plan.',win:'The relay is built and tested before the beacon goes on. Our plan fits the work, not just the clock.',keepsake:'A dependency is a job that needs another job first.',adult:{term:'Dependencies and scheduling',text:'A predecessor must reach the required state before its successor can proceed. In a larger network, the longest dependency path constrains the earliest finish. This small exercise does not teach a full critical-path calculation.',mba:'Project scheduling: distinguish dependencies, duration estimates, resource availability, and milestones.',source:'sequence'}},
- {id:6,place:'Team Garage',title:'No one has eight hands',tag:'SHARE THE LOAD',kind:'team',icon:'team',color:'teal',lead:'Jayden',story:['Jayden has a relay, a route panel, a radio, and three work cards. His cape is caught under a crate. “I may have picked too many jobs.”','Mika brings her tools. Bolt rolls up beside them. Each friend has different skills and room for some work. They can help without doing every job at once.'],lesson:'Match jobs to people’s skills and the time they have.',example:'If Jayden is full, a new job needs another helper or a new place in the plan. Working harder is not the only choice.',task:'Give our team room to work',instruction:'Choose a helper for each job. The boxes show how much work each friend can hold.',win:'The jobs fit the team. There is room to do careful work and help each other.',keepsake:'Plan for people’s skills and capacity.',adult:{term:'Resource allocation and capacity',text:'A plan must respect skill constraints and finite capacity. Multiple allocations can work. Overloading the most visible contributor is not a substitute for coordination or schedule adjustment.',mba:'Organizational behavior and resource management: consider workload, capabilities, and opportunity costs.',source:'watt2'}},
- {id:7,place:'Gadget Depot',title:'A little room in the jar',tag:'MAKE A REAL BUDGET',kind:'budget',icon:'coins',color:'coral',lead:'Bolt',story:['The team has eleven gear tokens. Bolt has found a shiny spinning hero emblem that costs four. “It spins!” he says. Mika nods. “And we still need a path and a gadget station.”','They list the needed things first. A reserve in the token jar can help if a planned item costs a little more. The shiny emblem can wait its turn.'],lesson:'A budget is a plan for what we can spend. Keep needed things first and leave a little room.',example:'If we have 5 tokens and spend 4, one stays for a small surprise. We do not use the route money for a shiny emblem.',task:'Pack our token jar',instruction:'Choose a skyway, signal lights, and a gadget station. Pick extra decor if it fits. A spare part will cost one token during the field test. Decide what to keep in reserve.',win:'Our needs fit the jar, and a token is still there if the plan needs a small fix.',keepsake:'A useful budget includes the work and a clear reserve.',adult:{term:'Cost planning and contingency',text:'Estimate the agreed work, check affordability, and make any reserve explicit. The exercise uses fictional tokens, not financial advice. A cheaper choice must still meet the stated access and quality requirements.',mba:'Managerial finance: opportunity cost, cost baselines, and planned contingency. The game does not cover discounted cash flow or earned value.',source:'watt2'}},
- {id:8,place:'Mission Control',title:'Finish one. Make room.',tag:'SEE THE WORK',kind:'kanban',icon:'board',color:'blue',lead:'Mika',story:['Mission cards cover the dispatch wall. “Are we done?” asks Jayden. “Or are we very good at making cards?”','Mika makes three spaces: Ready, Doing, and Done. Only two cards can be in Doing at once. Bolt finishes a signal relay. A space opens. “Now I know what to do next!”'],lesson:'Just-in-time means making what is needed, when it is needed, in the amount needed. Pull signals help us do that. Limit started work so it can flow.',example:'Doing has two spaces. If both are full, help finish a job. At dispatch, one used pack returns one card. That card asks us to make one replacement.',task:'Run the workshop board',instruction:'Finish the four jobs with no more than two in Doing. Then run dispatch: the city takes packs, and returned cards tell us what to replace.',win:'Our board shows the real work. Finishing made space for the next job.',keepsake:'See the work. Limit what is in progress.',adult:{term:'Visual management and work-in-progress limits',text:'This is a simple visual workflow inspired by kanban and work-in-progress limits. Manufacturing kanban is also a pull signal for replenishment; it is not merely a three-column software board.',mba:'Operations management: flow, queues, capacity, and visibility. Finishing work matters more than maximizing started work.',source:'lean3'}},
- {id:9,place:'Weather Lookout',title:'A plan for a maybe',tag:'THINK AHEAD',kind:'risk',icon:'cloud',color:'teal',lead:'Bolt',story:['A small cloud floats over the lookout. It looks a little like a loaf of bread. “What if rain reaches our signal gear?” asks Bolt.','“Then we will be glad we thought about it,” says Jayden. They look at three maybes. They do not need to guess the whole future. They can choose a useful backup for each one.'],lesson:'A risk is a maybe that could change our plan. Decide what we can do if it happens.',example:'If rain could wet our signal gear, we can have a dry place ready. A backup is easier to use when the team knows it.',task:'Give each maybe a backup',instruction:'Choose one useful backup for each card. Then try a practice day.',win:'The team knows where to go and what to do. A maybe has a named backup.',keepsake:'Name the risk, its effect, and a useful response.',adult:{term:'Risk planning',text:'Risk involves uncertainty and an effect on objectives. Discuss likely impact, choose a proportionate response, and assign ownership. The fictional practice day tests preparedness, not a claim that all uncertainty can be removed.',mba:'Decision-making under uncertainty: compare prevention, contingency, and residual risk while keeping the goal and constraints visible.',source:'watt2'}},
- {id:10,place:'The Test Deck',title:'Good enough to use?',tag:'TEST THE PROMISE',kind:'quality',icon:'check',color:'gold',lead:'Mika',story:['The beacon shines. The new Hero Hub looks bright. Jayden is ready to call the hub done. Mika brings the needs list. “Let us try it as a neighbor would.”','The beacon code panel is too high to read from the path. A box is in the way. One control panel is out of reach. Bolt opens his tool box. “Three small fixes, then another try.”'],lesson:'Jidoka means work can stop when a fault appears. Call for help, fix its cause, and check the fix before starting again.',example:'Stop a crooked-card printer at its first bad card. Fix the guide and test it. A shaped slot helps prevent the same slip next time. This is error-proofing.',task:'Try the hub as a neighbor',instruction:'Inspect, fix, and retest the three hub parts. Then choose what to do when the signal printer makes a bad card.',win:'The tests match the needs list. Our hub is ready for people to try.',keepsake:'Agree on a test, try it, fix it, and try again.',adult:{term:'Quality and acceptance',text:'Check the output against agreed criteria rather than decorative polish. These original access examples teach verification and user acceptance, not a formal engineering safety inspection.',mba:'Quality management: distinguish designing useful checks, performing them, and obtaining acceptance from intended users.',source:'lean3'}},
- {id:11,place:'The Switchboard',title:'One more bright idea',tag:'CHANGE WITH CARE',kind:'change',icon:'switch',color:'coral',lead:'Jayden',story:['A neighbor asks for a message-drone dock at the hub. Jayden loves it. Bolt lifts a work card. “Does it go in our plan now?”','Mika puts the new idea beside the budget. “We can trade an extra, or save it for our next mission. We should not promise more work without checking what changes.”'],lesson:'A new idea can change the work, cost, or time. Check the trade, then agree on the change.',example:'We can swap an extra banner for a drone dock, or plan the drone dock for another day. We keep the path and quiet spot.',task:'Try a change at the switchboard',instruction:'Pick a plan. Read what it changes. Then agree it with our neighbors.',win:'Our new plan is clear. Everyone knows what changed and what stayed.',keepsake:'Check a change, agree it, and tell the team.',adult:{term:'Change control and trade-offs',text:'Evaluate the proposed change against benefits, constraints, and acceptance criteria. An approved swap and a consciously deferred request can both be responsible outcomes. Essential access requirements remain protected.',mba:'Governance and scope control: keep a visible decision trail rather than silently absorbing new work.',source:'watt2'}},
- {id:12,place:'Little Better Lab',title:'The superpower of a small change',tag:'TRY. LOOK. LEARN.',kind:'kaizen',icon:'loop',color:'blue',lead:'Mika',story:['Bolt scans signal cards. Then he rolls across the room for the next pack. Then he rolls back. He has made eight trips. His wheels are fine. The card pack is just far away.','Mika watches one round with him. “What if we move the cards?” she asks. They can try a small change, count the trips, and decide what to keep.'],lesson:'Kaizen is a Japanese word for improvement. Try a small change, look at what happened, and learn together.',example:'Plan a closer card pack. Do a trial. Check the trips. Act: keep a useful layout and check it next shift. This is the plan-do-check-act cycle, or PDCA.',task:'Make the work a little better',instruction:'Pick a change. Watch two test rounds, then keep the plan or try another change. Our two baseline rounds took 8 and 8 trips.',win:'Two tests give us evidence for a layout decision. We will keep checking next shift.',keepsake:'Improve the way we work, then check the result.',adult:{term:'Kaizen and iterative improvement',text:'The game introduces Japanese-influenced continuous improvement through a small plan-do-check-act cycle. Observe the process, test one change, measure an outcome, and adjust. One trial is a clue, not proof of lasting performance.',mba:'Lean operations and learning systems: focus on process design, evidence, and respect for people rather than demanding personal speed.',source:'lean1'}},
- {id:13,place:'Hero Hub Launch',title:'Light up Signal City',tag:'YOUR TEAM. YOUR PLAN.',kind:'finale',icon:'star',color:'gold',lead:'Everyone',story:['The Hero Hub is ready. Our plans have become clear routes, useful gear, and a shining beacon. One last project will help the whole city: a Signal Rover that carries messages and books between neighbors.','Jayden opens our plan book. Mika brings the work board. Bolt brings one spoon, just in case. We can use what we learned to launch the rover, then show the neighborhood team how to care for it.'],lesson:'Use the whole plan: a clear goal, people, order, resources, checks, and a handover.',example:'A Signal Rover is not finished just because it shines. It needs a clear route, controls people can reach, and a team to care for it.',task:'Launch our Signal Rover',instruction:'Build the plan one scene at a time. Our team is here to help.',win:'The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project has a finish, and the good it makes can carry on.',keepsake:'Finish, hand over, learn, and thank the team.',adult:{term:'Integrated delivery and project closure',text:'The capstone uses a new Signal Rover deliverable to connect stakeholder requirements, sequencing, capacity and budget, quality, and handover. Acceptance and ownership distinguish closure from merely stopping work.',mba:'Integration and benefits: tie project outputs back to intended value and transfer continuing responsibilities to operations.',source:'watt2'}}
+  {
+    "id": 1,
+    "place": "Signal Roof",
+    "title": "A spark worth making",
+    "tag": "START WITH A PURPOSE",
+    "kind": "sort",
+    "icon": "spark",
+    "color": "gold",
+    "lead": "Jayden",
+    "story": [
+      "Jayden looks across the empty roof. “A signal beacon!” he says. “A way for neighbors to reach our new Hero Hub.” Bolt holds up a broom. “Is sweeping a hero project too?”",
+      "Mika draws two boxes. One is for a new thing with a finish. The other is for a job we do again and again. Both matter. They just need different plans."
+    ],
+    "lesson": "A project makes something new. It has a start and an end. Operations are the jobs we repeat to keep things working.",
+    "example": "Building our new beacon is a project. Checking its radio each day is part of operations. We need a plan for both.",
+    "task": "Give each job a home",
+    "instruction": "For each card, choose Project or Daily job. A daily job is part of operations. When all four have a choice, tap Try our plan.",
+    "win": "Building our new hub is a project. We can name its finish, then plan how to get there.",
+    "keepsake": "A project has a start and an end. Operations keep things working.",
+    "adult": {
+      "term": "Project versus operations",
+      "text": "A temporary, goal-directed undertaking differs from continuing operations. The hub is the project; daily care after handover is an operational responsibility.",
+      "mba": "Strategy and operations: connect the proposed outcome to a real need, then define where project responsibility ends.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 2,
+    "place": "Neighbor Station",
+    "title": "A hero with good ears",
+    "tag": "LISTEN BEFORE YOU BUILD",
+    "kind": "needs",
+    "icon": "people",
+    "color": "teal",
+    "lead": "Mika",
+    "story": [
+      "At Neighbor Station, three neighbors share what they need at the Hero Hub. One uses a wheelchair. One needs a quiet place to rest and recharge. One needs to reach the signal controls without a stretch.",
+      "Jayden starts drawing a high control desk. Then he reads the notes. “That desk would be hard to use,” he says. Mika lowers it in the drawing. “Good thing we asked before we built it!”"
+    ],
+    "lesson": "Stakeholders are people who use a project or are affected by it. Requirements are the things the project must do for them.",
+    "example": "A neighbor needs room for a wheelchair. A clear path becomes a requirement for our hub. We write it on our needs list and check it when we build.",
+    "task": "Build our needs list",
+    "instruction": "Open all three notes. Then tap each thing the neighbors asked for. A check mark means it is on our needs list. Tap it again to take it off.",
+    "win": "Our hub has a clear path, a quiet spot, and low gadget controls. Listening changed the plan.",
+    "keepsake": "The people who use a project help define success.",
+    "adult": {
+      "term": "Stakeholders and requirements",
+      "text": "The people affected by a project help define useful outcomes and acceptance criteria. Access needs belong in scope from the start, not in an optional wish list.",
+      "mba": "Stakeholder engagement and customer value: distinguish the team’s preferred solution from what users actually need.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 3,
+    "place": "The Blue Room",
+    "title": "A promise we can keep",
+    "tag": "CHOOSE THE FINISH",
+    "kind": "scope",
+    "icon": "target",
+    "color": "blue",
+    "lead": "Jayden",
+    "story": [
+      "In the Blue Room, Mika pins up the three needs from Neighbor Station: low signal controls, a quiet recharge nook, and a clear path. Bolt adds a drawing of a moon base.",
+      "“Let us keep our promise to the neighbors first,” says Jayden. “The moon base can go on our Later list.” Bolt nods. “More time to pack moon snacks.”"
+    ],
+    "lesson": "Scope is the work we agree to do. Acceptance criteria are the checks that tell us the work meets our promise.",
+    "example": "Our scope includes low signal controls, a quiet recharge nook, and a clear path. One acceptance criterion is that a neighbor can reach the controls. A moon base stays on our Later list.",
+    "task": "Draw a line around our promise",
+    "instruction": "Choose This hub for each of the three agreed needs. Choose Later for ideas outside this project.",
+    "win": "A clear promise helps everyone know what to build and when we are done.",
+    "keepsake": "Scope names the work. Acceptance criteria tell us how to check it.",
+    "adult": {
+      "term": "Scope and acceptance criteria",
+      "text": "Scope describes agreed deliverables and boundaries. Acceptance criteria make completion observable. A request can be valuable while still sitting outside the current approved scope.",
+      "mba": "Project charter and governance: establish the intended benefit, boundaries, sponsor agreement, and acceptance conditions.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 4,
+    "place": "Gear Works",
+    "title": "Build the hero kit",
+    "tag": "BREAK IT DOWN",
+    "kind": "group",
+    "icon": "blocks",
+    "color": "coral",
+    "lead": "Mika",
+    "story": [
+      "At Gear Works, Mika sets out a model of the Hero Hub. It has a clear path, a low gadget station, and a quiet recharge nook. “That is a lot to build,” says Jayden.",
+      "Mika makes a work list for each part. Route is for the path. Gear is for the gadget station. Nook is for the quiet space. Bolt puts a spoon beside each list. “Now we can see which jobs belong together.”"
+    ],
+    "lesson": "A work breakdown structure splits a project into parts and the smaller jobs needed to make them.",
+    "example": "Our clear path needs two jobs: mark a wide route and move boxes out of the way. Both go on the Route list. The Gear and Nook lists hold jobs for the other parts.",
+    "task": "Fill the work shelves",
+    "instruction": "Read a job card. Tap Route for path work, Gear for gadget-station work, or Nook for quiet-space work. Choose a list for all six cards.",
+    "win": "The work is easier to see. Now we can find missing pieces and share jobs.",
+    "keepsake": "A work breakdown structure makes the parts and jobs clear.",
+    "adult": {
+      "term": "Work breakdown structure",
+      "text": "Decompose deliverables into manageable work packages. Grouping deliverables makes completeness and ownership visible before detailed scheduling.",
+      "mba": "Operations design: decompose an outcome before estimating effort or assigning accountability.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 5,
+    "place": "Clockwork Walk",
+    "title": "What comes first?",
+    "tag": "MAKE THE ORDER WORK",
+    "kind": "order",
+    "icon": "clock",
+    "color": "gold",
+    "lead": "Bolt",
+    "story": [
+      "At Clockwork Walk, Bolt finds the beacon switch. “Ready to turn it on?” Jayden points to the parts on the bench. “We need to build its relay first.” A relay passes the signal to the beacon.",
+      "Mika lays out four job cards. First draw the plan. Then build the relay, test it, and switch on the beacon. “We cannot test a relay that is not built yet,” she says."
+    ],
+    "lesson": "A dependency means one job needs another job to happen first. A schedule puts jobs in a working order and plans when to do them.",
+    "example": "Testing the relay depends on building it first. That dependency tells us to put Build before Test in our schedule.",
+    "task": "Build a path through the jobs",
+    "instruction": "Use Up or Down beside a card to move it. Put the first job at the top and the last job at the bottom. Then tap Try our plan.",
+    "win": "The relay is built and tested before the beacon goes on. Our plan fits the work, not just the clock.",
+    "keepsake": "A dependency is a job that needs another job first.",
+    "adult": {
+      "term": "Dependencies and scheduling",
+      "text": "A predecessor must reach the required state before its successor can proceed. In a larger network, the longest dependency path constrains the earliest finish. This small exercise does not teach a full critical-path calculation.",
+      "mba": "Project scheduling: distinguish dependencies, duration estimates, resource availability, and milestones.",
+      "source": "sequence"
+    }
+  },
+  {
+    "id": 6,
+    "place": "Team Garage",
+    "title": "No one has eight hands",
+    "tag": "SHARE THE LOAD",
+    "kind": "team",
+    "icon": "team",
+    "color": "teal",
+    "lead": "Jayden",
+    "story": [
+      "At Team Garage, Jayden has taken so many jobs that his cards hide his face. “I cannot even see my list!” he says. Mika takes a look. “Let us share these.”",
+      "Each friend can do certain jobs and has time for only so much work. One box stands for one bit of work. A job that needs two boxes takes more time than a job that needs one."
+    ],
+    "lesson": "Resources are the people, time, tools, and supplies we can use. Capacity is how much work a person or team can do in the time available.",
+    "example": "Jayden has capacity for three work boxes. A two-box job and a one-box job fit. Another job would need a different helper or another shift.",
+    "task": "Give our team room to work",
+    "instruction": "Choose a helper from the list beside each job. The boxes above fill as you add work. Give each friend only as much work as their capacity allows.",
+    "win": "The jobs fit the team. There is room to do careful work and help each other.",
+    "keepsake": "Plan for people’s skills and capacity.",
+    "adult": {
+      "term": "Resource allocation and capacity",
+      "text": "A plan must respect skill constraints and finite capacity. Multiple allocations can work. Overloading the most visible contributor is not a substitute for coordination or schedule adjustment.",
+      "mba": "Organizational behavior and resource management: consider workload, capabilities, and opportunity costs.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 7,
+    "place": "Gadget Depot",
+    "title": "A little room in the jar",
+    "tag": "MAKE A REAL BUDGET",
+    "kind": "budget",
+    "icon": "coins",
+    "color": "coral",
+    "lead": "Bolt",
+    "story": [
+      "At Gadget Depot, the team has eleven gear tokens. They need a clear skyway, signal lights, and a low gadget station. A skyway is a path that links the city roofs. “Both panel choices make a clear path,” says Mika.",
+      "Bolt spots a spinning emblem. “Can we get that too?” Mika points to the jar. “Only if the needed parts fit first. Let us also save a token for a spare part.”"
+    ],
+    "lesson": "A budget is a plan for what we can spend. A contingency reserve is money set aside for a possible extra cost.",
+    "example": "Our budget has eleven tokens. If the needed parts cost ten, one token stays in our contingency reserve. It can pay for the spare part in our test.",
+    "task": "Pack our token jar",
+    "instruction": "Choose one option in each needed group. Decorations are optional. Watch the token jar as you choose. Keep at least one token for the spare part.",
+    "win": "Our needs fit the jar, and a token is still there if the plan needs a small fix.",
+    "keepsake": "A useful budget includes the work and a clear reserve.",
+    "adult": {
+      "term": "Cost planning and contingency",
+      "text": "Estimate the agreed work, check affordability, and make any reserve explicit. The exercise uses fictional tokens, not financial advice. A cheaper choice must still meet the stated access and quality requirements.",
+      "mba": "Managerial finance: opportunity cost, cost baselines, and planned contingency. The game does not cover discounted cash flow or earned value.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 8,
+    "place": "Mission Control",
+    "title": "Finish one. Make room.",
+    "tag": "SEE THE WORK",
+    "kind": "kanban",
+    "icon": "board",
+    "color": "blue",
+    "lead": "Mika",
+    "story": [
+      "At Mission Control, Jayden finds a wall full of job cards. “Which ones are finished?” he asks. Mika puts them in three columns: Ready, Doing, and Done.",
+      "Doing has room for two cards. When a job is finished, its card moves to Done and frees a space. After these four jobs, the team will send out signal packs: bags of spare signal parts for city crews."
+    ],
+    "lesson": "Kanban uses visible signals to help manage work. Work in progress, or WIP, is work we have started but not finished. A WIP limit keeps us from starting too much at once.",
+    "example": "Our board has a WIP limit of two jobs in Doing. Next we will use returned kanban cards to replace used signal packs. This supports just-in-time: making what is needed, when it is needed, in the amount needed.",
+    "task": "Run the workshop board",
+    "instruction": "Tap Start this job to move a card from Ready to Doing. Tap Finish this job to move it to Done. Keep no more than two in Doing. Once all four are done, try the signal-pack station below.",
+    "win": "Our board shows the real work. Finishing made space for the next job.",
+    "keepsake": "Use kanban signals. Keep work in progress within its limit.",
+    "adult": {
+      "term": "Visual management and work-in-progress limits",
+      "text": "This is a simple visual workflow inspired by kanban and work-in-progress limits. Manufacturing kanban is also a pull signal for replenishment; it is not merely a three-column software board.",
+      "mba": "Operations management: flow, queues, capacity, and visibility. Finishing work matters more than maximizing started work.",
+      "source": "lean3"
+    }
+  },
+  {
+    "id": 9,
+    "place": "Weather Lookout",
+    "title": "A plan for a maybe",
+    "tag": "THINK AHEAD",
+    "kind": "risk",
+    "icon": "cloud",
+    "color": "teal",
+    "lead": "Bolt",
+    "story": [
+      "At Weather Lookout, a small cloud looks like a loaf of bread. Bolt points to the signal gear. “What if rain gets it wet?”",
+      "“Let us plan for that,” says Jayden. The team also checks what they could do if a pack arrives late or a helper is away. A backup gives them a way to keep working."
+    ],
+    "lesson": "A risk is something that might happen and change our plan. A risk response is what we plan to do about it.",
+    "example": "Rain might wet the signal gear. That is the risk. Keeping a dry gear bay ready is our risk response.",
+    "task": "Give each maybe a backup",
+    "instruction": "Read each risk. Choose one backup for it. Then tap Try a practice day to see what happens.",
+    "win": "The team knows where to go and what to do. A maybe has a named backup.",
+    "keepsake": "Name the risk, its effect, and a useful response.",
+    "adult": {
+      "term": "Risk planning",
+      "text": "Risk involves uncertainty and an effect on objectives. Discuss likely impact, choose a proportionate response, and assign ownership. The fictional practice day tests preparedness, not a claim that all uncertainty can be removed.",
+      "mba": "Decision-making under uncertainty: compare prevention, contingency, and residual risk while keeping the goal and constraints visible.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 10,
+    "place": "The Test Deck",
+    "title": "Good enough to use?",
+    "tag": "TEST THE PROMISE",
+    "kind": "quality",
+    "icon": "check",
+    "color": "gold",
+    "lead": "Mika",
+    "story": [
+      "At the Test Deck, Jayden sees the new hub shine. “Is it ready?” Mika brings the needs list. “Let us check it as a neighbor would.”",
+      "The beacon code panel is too high. A box blocks the path. The signal controls are too far back. Bolt opens his tool box. “We can fix each one, then test it again.”"
+    ],
+    "lesson": "Quality means our work meets the agreed needs. Jidoka means we can spot a fault and stop work to fix its cause before more faulty work is made.",
+    "example": "If the printer makes a crooked card, stop it. Use the help lamp, an andon, to call the team. Fix and test the guide. A shaped slot that keeps cards straight is error-proofing.",
+    "task": "Try the hub as a neighbor",
+    "instruction": "Tap Inspect this part to find a problem. Choose a fix, then tap Test the fix. Do this for all three parts. Then help the team with the printer below.",
+    "win": "The tests match the needs list. Our hub is ready for people to try.",
+    "keepsake": "Check quality. Stop a fault, fix its cause, and test again.",
+    "adult": {
+      "term": "Quality and acceptance",
+      "text": "Check the output against agreed criteria rather than decorative polish. These original access examples teach verification and user acceptance, not a formal engineering safety inspection.",
+      "mba": "Quality management: distinguish designing useful checks, performing them, and obtaining acceptance from intended users.",
+      "source": "lean3"
+    }
+  },
+  {
+    "id": 11,
+    "place": "The Switchboard",
+    "title": "One more bright idea",
+    "tag": "CHANGE WITH CARE",
+    "kind": "change",
+    "icon": "switch",
+    "color": "coral",
+    "lead": "Jayden",
+    "story": [
+      "At the Switchboard, a neighbor asks for a dock where a small drone can bring messages. “That could help!” says Jayden. “Do we have time to add it?”",
+      "Mika checks the plan. They could take two extra shifts, swap an optional banner for the dock, or build the dock in a later project. Each choice changes what the team can finish today."
+    ],
+    "lesson": "Change control means checking a new request before agreeing to change the plan. A trade-off means gaining one thing while giving up another.",
+    "example": "Swapping an optional banner for a drone dock is a trade-off. Adding the dock without a swap takes two extra shifts. Saving it for later keeps today’s work the same.",
+    "task": "Try a change at the switchboard",
+    "instruction": "Choose a plan and read what changes. Tap Agree this plan with our neighbors. Then tap Try our plan to see the result.",
+    "win": "Our new plan is clear. Everyone knows what changed and what stayed.",
+    "keepsake": "Use change control: check, agree, and share the change.",
+    "adult": {
+      "term": "Change control and trade-offs",
+      "text": "Evaluate the proposed change against benefits, constraints, and acceptance criteria. An approved swap and a consciously deferred request can both be responsible outcomes. Essential access requirements remain protected.",
+      "mba": "Governance and scope control: keep a visible decision trail rather than silently absorbing new work.",
+      "source": "watt2"
+    }
+  },
+  {
+    "id": 12,
+    "place": "Little Better Lab",
+    "title": "The superpower of a small change",
+    "tag": "TRY. LOOK. LEARN.",
+    "kind": "kaizen",
+    "icon": "loop",
+    "color": "blue",
+    "lead": "Mika",
+    "story": [
+      "At Little Better Lab, Bolt scans signal cards. Each time he needs another pack, he rolls across the room and back. In each of two rounds, he makes eight trips.",
+      "Mika watches beside him. “The packs are far from your scanner,” she says. “Let us try a change and count the trips again.” Bolt likes that idea. His wheels do not need to go faster to make the work easier."
+    ],
+    "lesson": "Kaizen is a Japanese word for improvement. We improve the way the work is done, try the change, and check what happened.",
+    "example": "The plan-do-check-act cycle, or PDCA, helps us learn. Plan: put cards near the scanner. Do: try two rounds. Check: count the trips. Act: keep a useful change or try a different one.",
+    "task": "Make the work a little better",
+    "instruction": "Choose one change. Run the first test, then the second. Compare the trips with the baseline: the two rounds before the change, with eight trips each. Keep the plan or choose another change.",
+    "win": "Two tests give us evidence for a layout decision. We will keep checking next shift.",
+    "keepsake": "Improve the way we work, then check the result.",
+    "adult": {
+      "term": "Kaizen and iterative improvement",
+      "text": "The game introduces Japanese-influenced continuous improvement through a small plan-do-check-act cycle. Observe the process, test one change, measure an outcome, and adjust. One trial is a clue, not proof of lasting performance.",
+      "mba": "Lean operations and learning systems: focus on process design, evidence, and respect for people rather than demanding personal speed.",
+      "source": "lean1"
+    }
+  },
+  {
+    "id": 13,
+    "place": "Hero Hub Launch",
+    "title": "Light up Signal City",
+    "tag": "YOUR TEAM. YOUR PLAN.",
+    "kind": "finale",
+    "icon": "star",
+    "color": "gold",
+    "lead": "Everyone",
+    "story": [
+      "The team returns to the Hero Hub with its plan book. There is one last project: launch a Signal Rover to carry books, messages, and spare parts around the city. It is a small delivery vehicle.",
+      "Jayden opens the book. Mika checks the work board. Bolt packs one spoon for his lunch. First they will plan and test the rover. Then they will choose its stops using the time and city links they have kept ready."
+    ],
+    "lesson": "Project closure means checking the finished work, getting agreement that it meets the needs, and sharing what we learned. Handover gives the next team what it needs to use and care for the result.",
+    "example": "Neighbors try the rover to check that it meets their needs. The library team gets its care card and agrees to look after it. That is our handover. Then we can close the launch project.",
+    "task": "Launch our Signal Rover",
+    "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes time away from deliveries. After all five scenes, plan the rover’s route.",
+    "win": "The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project has a finish, and the good it makes can carry on.",
+    "keepsake": "Finish, hand over, learn, and thank the team.",
+    "adult": {
+      "term": "Integrated delivery and project closure",
+      "text": "The capstone uses a new Signal Rover deliverable to connect stakeholder requirements, sequencing, capacity and budget, quality, and handover. Acceptance and ownership distinguish closure from merely stopping work.",
+      "mba": "Integration and benefits: tie project outputs back to intended value and transfer continuing responsibilities to operations.",
+      "source": "watt2"
+    }
+  }
 ];
 export const sources={
  watt2:{title:'Project Management – 2nd Edition, chapter 2: Project Management Overview',authors:'Adrienne Watt; Project Management Open Resources; TAP-a-PM',url:'https://opentextbc.ca/projectmanagement/chapter/chapter-2-what-is-a-project-project-management/',license:'CC BY 4.0; credited upstream sections CC BY 3.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',use:'Conceptual foundation for original superhero stories about projects, goals, constraints, people, and coordination. No textbook images, tables, exercises, or quoted definitions are used.'},
- sequence:{title:'Project Management Basics: Activity Sequencing',authors:'Sharon Blanchard',url:'https://kirkwood.pressbooks.pub/projectmanagementbasics/chapter/activity-sequencing/',license:'CC BY 4.0, except where otherwise noted',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',use:'Concept reference for task order and predecessors. Our sign-making example, controls, cards, and explanation are original. No wedding example, image, or embedded video is reused.'},
+ sequence:{title:'Project Management Basics: Activity Sequencing',authors:'Sharon Blanchard',url:'https://kirkwood.pressbooks.pub/projectmanagementbasics/chapter/activity-sequencing/',license:'CC BY 4.0, except where otherwise noted',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',use:'Concept reference for task order and predecessors. Our signal-relay example, controls, cards, and explanation are original. No wedding example, image, or embedded video is reused.'},
  lean1:{title:'SPC and Lean Manufacturing, chapter 1: Introduction to Lean Manufacturing',authors:'Andrea Bearman and Roberta Gagnon',url:'https://pressbooks.palni.org/spcleanmanufacturing/chapter/chapter-1/',license:'CC BY 4.0, except where otherwise noted',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',use:'Concept reference for small improvements and process observation. No third-party illustrations, video, media, or quoted passages are used.'},
  lean3:{title:'SPC and Lean Manufacturing, chapter 3: Visual Workplace and Error-Proofing',authors:'Andrea Bearman and Roberta Gagnon',url:'https://pressbooks.palni.org/spcleanmanufacturing/chapter/chapter-3/',license:'CC BY 4.0, except where otherwise noted',licenseUrl:'https://creativecommons.org/licenses/by/4.0/',use:'Concept reference for visible work, simple signals, and checking work at the source. All boards, tests, art, and activities are original. The game does not repeat the chapter’s unverified memory-percentage claims or treat every kanban practice as a three-column board.'}
 };

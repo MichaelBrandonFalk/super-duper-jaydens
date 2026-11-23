@@ -1,5 +1,13 @@
 # Releases
 
+## 1.3.3
+
+- Reviewed all thirteen stories, lessons, examples, instructions, and results for clarity and cohesion.
+- Kept core project-management vocabulary and added concrete explanations to the player-facing lessons.
+- Aligned names for the hub parts and explained the rover, work boxes, shifts, route slots, and signal packs.
+- Clarified kanban/printer activity transitions, change-plan consequences, and the model-plan help button.
+- Streamlined the two-test PDCA flow and corrected misleading result text and grammar.
+
 ## 1.3.2
 
 - Added a prominent Download game button beside Play, with Windows, Mac, and Linux Mint clearly listed.

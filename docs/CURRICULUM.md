@@ -1,6 +1,6 @@
 # Curriculum and license audit
 
-Reviewed November 20, 2026. Super Duper Jaydens! is an independent, original educational game. Stories, models, artwork, interfaces, and recordings were created for this project. Early-reader language and examples replace academic prose; the concepts are reordered into thirteen fictional superhero missions. No textbook paragraphs, diagrams, videos, proprietary worksheets, or quotations are reproduced as game assets. The sources are not endorsements.
+Reviewed November 20, 2026. Super Duper Jaydens! is an independent, original educational game. Stories, models, artwork, and interfaces were created for this project. The soundtrack uses credited Kevin MacLeod recordings. Early-reader language and examples replace academic prose; the concepts are reordered into thirteen fictional superhero missions. No textbook paragraphs, diagrams, videos, proprietary worksheets, or quotations are reproduced as game assets. The sources are not endorsements.
 
 ## Selected conceptual references
 
@@ -63,7 +63,7 @@ The reading target is roughly age seven, with optional support and read-aloud. T
 
 - All story images are original generated production-style paintings, recorded in ART-DIRECTION.md. Reference images for edits were the project’s own approved key art and earlier generated atlases.
 - No DC, Marvel, Batman, Spider-Man, or other franchise assets, costume designs, logos, screenshots, video, or soundtracks are included. Historic style research is linked in the art record; no research-site media are redistributed.
-- Music melodies, arrangements, synthesis, and effects are original to this game. No sample libraries or pre-existing theme tunes are used. See AUDIO.md and the source manifest.
+- The soundtrack uses four Kevin MacLeod recordings under CC BY 4.0. Playback changes and required credits are recorded in AUDIO.md and the audio manifest. Sound effects are original synthesized cues.
 - The public repository is not itself a grant of an open-source license to original game assets. See LICENSE.md. Third-party source rights and notices remain separate.
 
 ## Version 1.1.0: applied operations
