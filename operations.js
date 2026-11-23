@@ -1,6 +1,6 @@
-import {workGroups} from './learning-content.js?v=1.4.8';
-import {fieldTotals} from './adventure.js?v=1.4.8';
-import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.8';
+import {workGroups} from './learning-content.js?v=1.4.9';
+import {fieldTotals} from './adventure.js?v=1.4.9';
+import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.9';
 export const demand=[1,2,1,2];
 export function flowState(choices=[]){let stock=2,served=0,waiting=0,extra=0,delay=0;const log=[];for(const [round,n] of choices.slice(0,4).entries()){const sent=Math.min(stock,demand[round]);waiting+=demand[round]-sent;served+=sent;stock=stock-sent+n;extra+=Math.max(0,stock-2);delay+=Math.max(0,n-2);log.push({round:round+1,need:demand[round],sent,made:n,stock});}return {stock,served,waiting,extra,delay,log,round:log.length};}
 const boxes=n=>n+' '+(n===1?'box':'boxes');

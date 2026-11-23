@@ -314,7 +314,7 @@ export const missions=[
     "keepsake": "Use change control: check, agree, and share the change.",
     "adult": {
       "term": "Change control and trade-offs",
-      "text": "Evaluate the proposed change against benefits, constraints, and acceptance criteria. An approved swap and a consciously deferred request can both be responsible outcomes. Essential access requirements remain protected.",
+      "text": "Evaluate the proposed change against benefits, constraints, and acceptance criteria. Agreeing to extra work and consciously deferring a request can both be responsible outcomes. Essential access requirements remain protected.",
       "mba": "Governance and scope control: keep a visible decision trail rather than silently absorbing new work.",
       "source": "watt2"
     }

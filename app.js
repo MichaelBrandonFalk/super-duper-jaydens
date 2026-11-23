@@ -1,13 +1,13 @@
-import {hubParts,neighborNotes,workGroups,improvementChoices} from './learning-content.js?v=1.4.8';
-import {downloadsView} from './downloads-ui.js?v=1.4.8';
-import {chooseCityMoment,cityMoments,momentResult} from './city-story.js?v=1.4.8';
-import {fieldView,storyJournal,routeView,districtEnding} from './adventure-ui.js?v=1.4.8';
-import {flowState,demand,feedbackFor,savedFeedback,unfinishedMessage,missionResult} from './operations.js?v=1.4.8';
-import {missions,opening,crew,sources,fieldNotes} from './data.js?v=1.4.8';
-import {rememberedDetour} from './detours.js?v=1.4.8';
-import {icon,cityArt,issueArt} from './art.js?v=1.4.8';
-import {freshProgress,cleanProgress,newActivity,evaluate,help,artifact,projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,budgetTotal,loads,boardCards,boardMove,riskCards,tests,finalActs,finalChoice,toggleNeighborNote,selectPlanOption} from './engine.js?v=1.4.8';
-import {initAudio,audioState,updateAudio,nextTrack,effect,celebrate,stopCelebration,duck,stopAll} from './audio.js?v=1.4.8';
+import {hubParts,neighborNotes,workGroups,improvementChoices} from './learning-content.js?v=1.4.9';
+import {downloadsView} from './downloads-ui.js?v=1.4.9';
+import {chooseCityMoment,cityMoments,momentResult} from './city-story.js?v=1.4.9';
+import {fieldView,storyJournal,routeView,districtEnding} from './adventure-ui.js?v=1.4.9';
+import {flowState,demand,feedbackFor,savedFeedback,unfinishedMessage,missionResult} from './operations.js?v=1.4.9';
+import {missions,opening,crew,sources,fieldNotes} from './data.js?v=1.4.9';
+import {rememberedDetour} from './detours.js?v=1.4.9';
+import {icon,cityArt,issueArt} from './art.js?v=1.4.9';
+import {freshProgress,cleanProgress,newActivity,evaluate,help,artifact,projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,budgetTotal,loads,boardCards,boardMove,riskCards,tests,finalActs,finalChoice,toggleNeighborNote,selectPlanOption} from './engine.js?v=1.4.9';
+import {initAudio,audioState,updateAudio,nextTrack,effect,celebrate,stopCelebration,duck,stopAll} from './audio.js?v=1.4.9';
 const main=document.querySelector('main'),key='super-duper-jaydens-v1',esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let store={active:'first',players:[{id:'first',name:'My adventure',progress:freshProgress(),prefs:{}}]},canSave=true,finishNow=false,speech=null;
 try{const raw=JSON.parse(localStorage.getItem(key)||'null');if(raw&&Array.isArray(raw.players)&&raw.players.length){const seen=new Set();const players=raw.players.slice(0,5).filter(x=>x&&typeof x.id==='string'&&!seen.has(x.id)&&(seen.add(x.id),true)).map(x=>({id:x.id.slice(0,60),name:typeof x.name==='string'?x.name.slice(0,24):'My adventure',progress:cleanProgress(x.progress),prefs:cleanPrefs(x.prefs)}));if(players.length)store={players,active:players.some(x=>x.id===raw.active)?raw.active:players[0].id};}}catch{canSave=false;}

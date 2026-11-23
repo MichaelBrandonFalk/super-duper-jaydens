@@ -72,3 +72,11 @@ test('the rover budget repair uses the remaining token and identifies the actual
  const raw=freshProgress();raw.done=[13];raw.reports[13]={delay:1,story:'A plan needed repair.',checks:[{ok:false,label:'A plan that fits our team',text:'The crew gives the control-panel job to Mika. After spending the panel money on stars, the team must find three more tokens before it can buy the panel.'}]};
  assert.equal(cleanProgress(raw).reports[13].checks[0].text,finalRepairs[2]);
 });
+
+test('deferring the landing pad does not promise it in the next mission, including saved records',async()=>{
+ const {artifact}=await import('../engine.js');const g=help(11,newActivity(11));
+ assert.match(artifact(11,g),/for a later project/);assert.doesNotMatch(artifact(11,g),/next mission/);
+ const raw=freshProgress();raw.done=[11];raw.games[11]=g;raw.plans[11]='We saved the drone landing pad for our next mission.';
+ const restored=cleanProgress(raw);assert.equal(restored.plans[11],artifact(11,g));assert.equal(restored.changePlan,2);assert.deepEqual(restored.done,[11]);
+ assert.equal(cleanProgress(restored).plans[11],restored.plans[11]);
+});

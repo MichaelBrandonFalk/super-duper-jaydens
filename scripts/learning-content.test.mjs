@@ -70,3 +70,14 @@ test('reselecting a current plan option retains tests, approval, and feedback; c
   if(kind==='quality')assert.equal(g.qualityKey,false);if(kind==='change')assert.equal(g.approved,false);if(kind==='layout'){assert.deepEqual(g.rounds,[]);assert.equal(g.trips,null);}
  }
 });
+
+test('reloading current plans preserves every job and repairs the previously shortened desk job',async()=>{
+ const {artifact}=await import('../engine.js');const p=freshProgress();
+ for(let id=1;id<=13;id++){p.done.push(id);p.games[id]=help(id,newActivity(id));p.plans[id]=artifact(id,p.games[id]);}
+ assert.deepEqual(cleanProgress(p).plans,p.plans);
+ p.plans[4]=p.plans[4].replace('Fit low buttons at the Message desk: Message desk','Fit Message desk: Message desk');
+ const restored=cleanProgress(p);assert.equal(restored.plans[4],artifact(4,p.games[4]));
+ p.plans[2]='Clear path · Low buttons at the Message desk · Quiet space';
+ assert.equal(cleanProgress(p).plans[2],'Clear path · Message desk · Quiet space');
+ assert.equal(cleanProgress(restored).plans[4],restored.plans[4]);
+});
