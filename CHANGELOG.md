@@ -1,3 +1,11 @@
+# v1.4.1 · Web clarity pass
+
+- Clarified the order of library deliveries and replacement packing, and when delayed boxes arrive.
+- Saved plans now record the actual risk responses, pencil packing, printer response, and five finale choices.
+- All five finale choices have review feedback, including the repairs for each problem.
+- Replaced vague printer and board labels; clarified budget totals and dependency wording.
+- Desktop builds remain paused.
+
 # Releases
 
 ## 1.4.0 (website only)

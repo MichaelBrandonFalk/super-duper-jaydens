@@ -70,7 +70,7 @@ export const missions=[
     "lesson": "Stakeholders are people who use a project or are affected by it. Requirements are the things the project must do for them.",
     "example": "A neighbor needs to use a wheelchair at the hub. We add Clear path to our requirements. When the hub is built, we will check that a wheelchair can use the whole Clear path.",
     "task": "Build our needs list",
-    "instruction": "Open all three notes. Then tap each thing the neighbors asked for. A check mark means it is on our needs list. Tap it again to take it off.",
+    "instruction": "Open all three notes. Then tap each thing the neighbors asked for. A check mark means it is on our needs list. Tap it again to take it off. Then tap Try our plan.",
     "win": "Our requirements include a Clear path, a Message desk with low buttons, and a Quiet space. Listening changed the plan.",
     "keepsake": "The people who use a project help define success.",
     "adult": {
@@ -96,7 +96,7 @@ export const missions=[
     "lesson": "Scope is the work we agree to do. Acceptance criteria are the checks that tell us the work meets our promise.",
     "example": "Our scope includes Clear path, Message desk, and Quiet space. One acceptance criterion is that a neighbor can reach the Message desk’s buttons. A moon base is outside this project.",
     "task": "Choose what belongs in this project",
-    "instruction": "For each idea, choose This project or Later. The three agreed parts belong in This project. Other ideas go in Later.",
+    "instruction": "For each idea, choose This project or Later. The three agreed parts belong in This project. Other ideas go in Later. Then tap Try our plan.",
     "win": "A clear promise helps everyone know what to build and when we are done.",
     "keepsake": "Scope names the work. Acceptance criteria tell us how to check it.",
     "adult": {
@@ -127,7 +127,7 @@ export const missions=[
     "lesson": "A work breakdown structure splits a project into parts and the smaller jobs needed to make them.",
     "example": "Clear path needs two jobs: mark the Clear path and move boxes off it. Both jobs belong on the Clear path work list.",
     "task": "Sort the hub’s work lists",
-    "instruction": "Read each job. Choose the part it helps build: Clear path, Message desk, or Quiet space. Choose one work list for each job. Do this for all six jobs.",
+    "instruction": "Read each job. Choose the part it helps build: Clear path, Message desk, or Quiet space. Choose one work list for each job. Do this for all six jobs, then tap Try our plan.",
     "win": "The work is easier to see. Now we can find missing pieces and share jobs.",
     "keepsake": "A work breakdown structure makes the parts and jobs clear.",
     "adult": {
@@ -155,7 +155,7 @@ export const missions=[
     "task": "Put the jobs in order",
     "instruction": "Use Up or Down beside a card to move it. Put the first job at the top and the last job at the bottom. Then tap Try our plan.",
     "win": "The Clear path is built and tested before we open it.",
-    "keepsake": "A dependency is a job that needs another job first.",
+    "keepsake": "A dependency means one job needs another job to happen first.",
     "adult": {
       "term": "Dependencies and scheduling",
       "text": "A predecessor must reach the required state before its successor can proceed. In a larger network, the longest dependency path constrains the earliest finish. This small exercise does not teach a full critical-path calculation.",
@@ -179,7 +179,7 @@ export const missions=[
     "lesson": "Resources are the people, time, tools, and supplies we can use. Capacity is how much work a person or team can do in the time available.",
     "example": "Jayden has capacity for three hours of work today. A two-hour job and a one-hour job fit. A fourth hour of work needs another helper or more time.",
     "task": "Give our team room to work",
-    "instruction": "Choose a helper for each job. Each job shows the hours it needs. Check the totals above so no helper has more hours of work than they have available.",
+    "instruction": "Choose a helper for each job. Each job shows the hours it needs. Check the totals above so each helper’s jobs fit their available hours. Then tap Try our plan.",
     "win": "The jobs fit the team. There is room to do careful work and help each other.",
     "keepsake": "Plan for people’s skills and capacity.",
     "adult": {
@@ -205,7 +205,7 @@ export const missions=[
     "lesson": "A budget is a plan for what we can spend. A contingency reserve is money set aside for a possible extra cost.",
     "example": "We have eleven tokens. If our planned work costs ten, one token stays in the contingency reserve. If a part breaks, that token can pay for a replacement.",
     "task": "Plan our spending",
-    "instruction": "Choose one option for Clear path, Message desk, and Quiet space. Decorations are optional. Check what you spend and keep a token in reserve for a possible extra cost.",
+    "instruction": "Choose one option for Clear path, Message desk, and Quiet space. Decorations are optional. Check the planned cost and keep at least one token in reserve for a possible extra cost. Then tap Try our plan.",
     "win": "Our needs fit the jar, and a token is still there if the plan needs a small fix.",
     "keepsake": "A useful budget includes the work and a clear reserve.",
     "adult": {
@@ -226,7 +226,7 @@ export const missions=[
     "lead": "Mika",
     "story": [
       "At Mission Control, Jayden finds a wall full of job cards. “Which jobs are finished?” he asks. Mika sorts them into Ready, Doing, and Done.",
-      "The team practices with four jobs from its hub plan. Each job card names one job. Doing has room for two jobs at once. Finishing a job frees a space. After this practice, the team will send boxes of pencils to the library."
+      "The team practices with four jobs from its hub plan. Each job card names one job. Ready means not started. Doing means started but not finished. Done means finished. Doing has room for two jobs at once. Finishing a job frees a space. After this practice, the team will send boxes of pencils to the library."
     ],
     "lesson": "Kanban uses visible signals to help manage work. Work in progress, or WIP, is work we have started but not finished. A WIP limit keeps us from starting too much at once.",
     "example": "Our WIP limit is two jobs in Doing. Next, the library returns a kanban card when it takes boxes of pencils. The card asks us to replace those boxes. This supports just-in-time: making what is needed, when it is needed, in the amount needed.",
@@ -251,14 +251,14 @@ export const missions=[
     "color": "teal",
     "lead": "Bolt",
     "story": [
-      "At Weather Lookout, a small cloud looks like a loaf of bread. Bolt points to a box of spare roof-light parts. “What if these get wet?”",
+      "At Weather Lookout, a small cloud looks like a loaf of bread. Bolt points to a box of spare hub parts. “What if these get wet?”",
       "“We can plan for that risk,” says Jayden. They also plan for a late delivery of paper and for a helper being away. A backup gives them a way to keep working if a risk happens."
     ],
     "lesson": "A risk is something that might happen and change our plan. A risk response is what we plan to do about it.",
     "example": "Rain might wet the spare parts. That is the risk. Keeping a cover ready is our risk response.",
     "task": "Choose a response to each risk",
     "instruction": "Read each risk and choose one response. Then tap Try a practice day. In this practice, all three risks happen so we can test our responses.",
-    "win": "The team knows where to go and what to do. A maybe has a named backup.",
+    "win": "The team knows where to go and what to do. Each risk has a response ready.",
     "keepsake": "Name the risk, its effect, and a useful response.",
     "adult": {
       "term": "Risk planning",
@@ -283,7 +283,7 @@ export const missions=[
     "lesson": "Quality means our work meets the agreed needs. Jidoka means a machine or worker can spot a fault and stop work before more faulty items are made.",
     "example": "If the printer makes a crooked card, stop it. An andon is a visible call for help, such as the help lamp. Fix the card holder and test it. A slot that holds cards straight is error-proofing.",
     "task": "Try the hub as a neighbor",
-    "instruction": "Inspect each part: Quiet space, Clear path, and Message desk. Choose a fix, then tap Test the fix. After all three pass, choose how to handle a printer fault.",
+    "instruction": "Inspect each part: Quiet space, Clear path, and Message desk. Choose a fix, then tap Test the fix. After all three pass, choose how to handle a printer fault. Then tap See the printer result.",
     "win": "The tests match the needs list. Our hub is ready for people to try.",
     "keepsake": "Check quality. Stop a fault, fix its cause, and test again.",
     "adult": {
@@ -336,7 +336,7 @@ export const missions=[
     "example": "Use the plan-do-check-act cycle, or PDCA. Plan: move the cards beside the scanner. Do: try two rounds. Check: count the trips. Act: keep a useful change or try another one.",
     "task": "Make the work a little better",
     "instruction": "Choose one change. Run the first test, then the second. Compare the trips with the baseline: the two rounds before the change, with eight trips each. Keep the plan or choose another change.",
-    "win": "Two tests give us evidence for a layout decision. We will keep checking next shift.",
+    "win": "Two tests give us evidence for a layout decision. We will keep checking next time.",
     "keepsake": "Improve the way we work, then check the result.",
     "adult": {
       "term": "Kaizen and iterative improvement",
@@ -361,7 +361,7 @@ export const missions=[
     "lesson": "Project closure means checking the finished work, getting agreement that it meets the needs, and sharing what we learned. Handover gives the next team what it needs to use and care for the result.",
     "example": "Neighbors try the rover to check that it meets their needs. The library team gets its care card and agrees to look after it. That is our handover. Then we can close the launch project.",
     "task": "Launch our Signal Rover",
-    "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes extra work before launch. After all five scenes, choose which neighborhood to visit first.",
+    "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes extra work before launch. After all five scenes, review the result. Then visit our neighbors.",
     "win": "The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project has a finish, and the good it makes can carry on.",
     "keepsake": "Finish, hand over, learn, and thank the team.",
     "adult": {
@@ -381,7 +381,7 @@ export const sources={
 
 export const fieldNotes={
 6:{term:'Muri · overburden',text:'Work that exceeds a person’s capacity creates strain and waiting. Change the plan rather than treating overload as a personal failing.'},
-8:{term:'Pull, kanban signals, and flow',text:'TPS replenishment cards authorize replacement of consumed stock. A deliberate two-pack buffer supports service; just-in-time does not mean keeping zero stock. In knowledge-work kanban, define work-item types, start and finish, movement policies, WIP controls, and a service-level expectation. Inspect WIP, throughput, work item age, and cycle time to improve that workflow. The game’s four-turn target is illustrative, not a probabilistic forecast.'},
+8:{term:'Pull, kanban signals, and flow',text:'TPS replenishment cards authorize replacement of consumed stock. A deliberate two-box buffer supports service; just-in-time does not mean keeping zero stock. In knowledge-work kanban, define work-item types, start and finish, movement policies, WIP controls, and a service-level expectation. Inspect WIP, throughput, work item age, and cycle time to improve that workflow. The game’s four-turn target is illustrative, not a probabilistic forecast.'},
 10:{term:'Jidoka, andon, and error-proofing',text:'Jidoka builds in detection and the ability to stop for abnormal work. An andon is a visible call for support. Stop, make the problem visible, help solve its cause, and verify before resuming. A shaped card holder is an original error-proofing example. A last-minute inspection alone is not the whole system.'},
 12:{term:'PDCA and process observation',text:'Observe the actual work with its operator. Establish a baseline, predict a change, test it, compare results, and decide what to standardize or revise. Removing unnecessary motion differs from asking someone to hurry. Two trials support a learning decision, not proof of long-term capability. Recheck under normal variation.'}
 };

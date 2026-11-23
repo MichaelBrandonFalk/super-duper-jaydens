@@ -7,3 +7,16 @@ test('dispatch and repeated PDCA trials are required before new field reports',(
 test('board time records real start and finish transitions without charging blocked moves',()=>{const g=newActivity(8);boardMove(g,2);assert.equal(g.boardClock,0);boardMove(g,0);boardMove(g,0);assert.equal(g.started[0],1);assert.equal(g.finished[0],2);});
 test('reports survive profile reload and current results determine the route without accumulating replay penalties',()=>{const p=freshProgress();p.reports[6]={delay:2,story:'Two shifts spent waiting.'};p.games[8]=help(8,newActivity(8));const cleaned=cleanProgress(JSON.parse(JSON.stringify(p)));assert.deepEqual(cleaned.games[8].flowChoices,[1,2,1,2]);assert.equal(cityOutcome(cleaned).stops,10);cleaned.reports[6]={delay:0,story:'Crew load fits.'};assert.equal(cityOutcome(cleaned).stops,12);const rough=newActivity(13);for(const a of finalActs)finalChoice(rough,1-a.right);assert.equal(missionResult(13,rough).delay,5);});
 test('complete early planning choices can produce different reports instead of forcing corrections',()=>{for(let id=1;id<=5;id++){const g=help(id,newActivity(id));assert.equal(missionResult(id,g).ready,true);assert.equal(missionResult(id,g).delay,0);if(id===1)g.picks[0]=1;if(id===2)g.picks[0]=0;if(id===3)g.picks[3]=0;if(id===4)g.picks[0]=2;if(id===5)g.order=[3,2,1,0];const result=missionResult(id,g);assert.equal(result.ready,true,id);assert.ok(result.delay>0,id);assert.ok(result.story.length>40,id);}});
+
+test('saved plan records distinguish the player’s actual risk, replenishment, and printer choices',async()=>{
+ const {artifact,riskCards}=await import('../engine.js');
+ const risk=help(9,newActivity(9));risk.picks={0:1,1:0,2:1};const text=artifact(9,risk);
+ for(let i=0;i<3;i++)assert.ok(text.includes(riskCards[i].options[risk.picks[i]]));
+ const flow=help(8,newActivity(8));flow.flowChoices=[0,2,1,2];assert.match(artifact(8,flow),/0, 2, 1, 2/);
+ const printer=help(10,newActivity(10));assert.match(artifact(10,printer),/stopped, fixed/);printer.qualityMode=1;assert.match(artifact(10,printer),/kept printing/);assert.doesNotMatch(artifact(10,printer),/stopped, fixed/);
+});
+test('all five finale choices retain their own outcome and repair explanation',async()=>{
+ const {artifact,finalRepairs}=await import('../engine.js');
+ for(const correct of [true,false]){const g=newActivity(13);for(const a of finalActs)finalChoice(g,correct?a.right:1-a.right);const rows=feedbackFor(13,g);assert.equal(rows.length,5);rows.forEach((r,i)=>{assert.equal(r.ok,correct);assert.equal(r.text,correct?finalActs[i].why:finalRepairs[i]);assert.ok(artifact(13,g).includes(finalActs[i].options[g.answers[i]]));});}
+ assert.match(finalRepairs[2],/three more tokens/);
+});

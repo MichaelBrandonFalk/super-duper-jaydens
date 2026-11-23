@@ -1,6 +1,6 @@
 # Consistent learning context
 
-Current web wording: v1.4.0, reviewed November 23, 2026.
+Current web wording: v1.4.1, reviewed November 23, 2026.
 
 The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
@@ -19,3 +19,5 @@ After each learning activity, players choose between two complete story actions 
 Budgets use tokens in the budget lesson. Capacity uses hours in the capacity lesson. Kanban replenishment uses boxes of pencils in its own practice. None is a currency spent across the adventure.
 
 Old saved records receive wording updates without rebuilding their answers from an unfinished replay. Earlier quality completions are retained, but are not represented as having performed the new Quiet space check.
+
+Saved plan summaries must describe the player’s tested choices, including choices that need repairs. Do not use a fixed successful-plan summary for risk, replenishment, printer, or finale activities. A kanban round sends available boxes first, then packs replacements for the next request; missed deliveries wait until tomorrow in this practice.
