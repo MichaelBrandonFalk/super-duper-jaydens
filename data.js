@@ -21,9 +21,9 @@ export const opening=[
     "title": "Make this city yours",
     "speaker": "YOUR TEAM",
     "text": [
-      "You are part of the Super Duper Jaydens. Choose a team color and a helper gadget below. The color picks which neighborhood gets the first delivery when its route is ready. The gadget can help with two city jobs.",
-      "Each issue has a story, a lesson, a plan to try, and a city job. After trying the plan, choose a tool for a city job. Save a tool for later if it does not fit this job. Our kit also has five supply packs.",
-      "The rover has time for twelve stops on launch day. A shift is one block of work time. Each extra shift leaves time for one fewer stop. We will show what each choice changes. You can take a break at any time."
+      "You are part of the Super Duper Jaydens. Choose a team color below. We will use it for our hero team throughout the story.",
+      "Each issue has a story, an idea to learn, and a plan to try. Then we will see what happened and make a choice in our story.",
+      "The team will help you try your ideas. You can change a plan and see a new result. You can take a break whenever you like."
     ]
   }
 ];
@@ -226,12 +226,12 @@ export const missions=[
     "lead": "Mika",
     "story": [
       "At Mission Control, Jayden finds a wall full of job cards. “Which jobs are finished?” he asks. Mika sorts them into Ready, Doing, and Done.",
-      "The team practices with four jobs from its hub plan. Each job card names one job. Doing has room for two jobs at once. Finishing a job frees a space. After this practice, the team will pack spare parts for city crews."
+      "The team practices with four jobs from its hub plan. Each job card names one job. Doing has room for two jobs at once. Finishing a job frees a space. After this practice, the team will send boxes of pencils to the library."
     ],
     "lesson": "Kanban uses visible signals to help manage work. Work in progress, or WIP, is work we have started but not finished. A WIP limit keeps us from starting too much at once.",
-    "example": "Our WIP limit is two jobs in Doing. Next, each crew returns a kanban card when it uses a pack of parts. The card asks us to replace that pack. This supports just-in-time: making what is needed, when it is needed, in the amount needed.",
+    "example": "Our WIP limit is two jobs in Doing. Next, the library returns a kanban card when it takes boxes of pencils. The card asks us to replace those boxes. This supports just-in-time: making what is needed, when it is needed, in the amount needed.",
     "task": "Move jobs from Ready to Done",
-    "instruction": "Tap Start this job to move a card to Doing. Tap Finish this job to move it to Done. Keep no more than two jobs in Doing. Finish all four jobs, then try packing parts below.",
+    "instruction": "Tap Start this job to move a card to Doing. Tap Finish this job to move it to Done. Keep no more than two jobs in Doing. Finish all four jobs, then try sending pencils to the library below.",
     "win": "Our board shows which jobs are finished. Finishing made space for the next job.",
     "keepsake": "Use kanban signals. Keep work in progress within its limit.",
     "adult": {
@@ -304,10 +304,10 @@ export const missions=[
     "lead": "Jayden",
     "story": [
       "At the Switchboard, a neighbor asks for a landing pad where a small delivery drone can bring messages. “That could help!” says Jayden. “How would it change our plan?”",
-      "Mika checks the work and budget. Adding the landing pad now takes two extra shifts, leaving time for two fewer rover stops. Saving it for a later project keeps the current launch plan on time. The team must agree on which result matters more."
+      "Mika checks the work and budget. Adding the landing pad now takes two extra hours, so the launch will be later. Saving it for a new project adds no time to the current project. The team must agree on which result matters more."
     ],
     "lesson": "Change control means checking a new request before agreeing to change the plan. A trade-off means gaining one thing while giving up another.",
-    "example": "Adding the landing pad now is a trade-off: we gain a landing pad today but have time for two fewer rover stops. We can also save the landing pad for a later project. Either choice needs agreement.",
+    "example": "Adding the landing pad now is a trade-off: we gain a landing pad, but the launch takes two extra hours. We can also save the landing pad for a later project. Either choice needs agreement.",
     "task": "Try a change at the switchboard",
     "instruction": "Choose a plan and read what it changes. Tap Agree this plan with our neighbors. Then tap Try our plan to see its result.",
     "win": "Our new plan is clear. Everyone knows what changed and what stayed.",
@@ -356,12 +356,12 @@ export const missions=[
     "lead": "Everyone",
     "story": [
       "The team returns to the Hero Hub with its plan book. The hub has a Clear path, a Message desk, and a Quiet space. Now the team will plan the launch of the Signal Rover, a small vehicle that delivers books, messages, and spare parts.",
-      "Jayden opens the book. Mika brings the job board. Bolt packs a spoon for lunch. First they will plan and test the rover. Then they will choose its delivery stops using the time and city connections they have ready."
+      "Jayden opens the book. Mika brings the job board. Bolt packs a spoon for lunch. First they will plan and test the rover. Then they will choose the first neighborhood to visit and share what they have made."
     ],
     "lesson": "Project closure means checking the finished work, getting agreement that it meets the needs, and sharing what we learned. Handover gives the next team what it needs to use and care for the result.",
     "example": "Neighbors try the rover to check that it meets their needs. The library team gets its care card and agrees to look after it. That is our handover. Then we can close the launch project.",
     "task": "Launch our Signal Rover",
-    "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes time away from deliveries. After all five scenes, plan the rover’s route.",
+    "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes extra work before launch. After all five scenes, choose which neighborhood to visit first.",
     "win": "The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project has a finish, and the good it makes can carry on.",
     "keepsake": "Finish, hand over, learn, and thank the team.",
     "adult": {

@@ -66,7 +66,7 @@ The reading target is roughly age seven, with optional support and read-aloud. T
 - The soundtrack uses four Kevin MacLeod recordings under CC BY 4.0. Playback changes and required credits are recorded in AUDIO.md and the audio manifest. Sound effects are original synthesized cues.
 - The public repository is not itself a grant of an open-source license to original game assets. See LICENSE.md. Third-party source rights and notices remain separate.
 
-## Version 1.1.0: applied operations
+## Historical version 1.1.0: applied operations
 
 Original simulations now connect planning choices to extra shifts and the rover’s first-day route. Current saved mission reports determine the result; replay replaces a report rather than accumulating penalties. Classification activities explain each card. Operational activities accept complete but strained plans, show their costs, and allow revision. These deterministic outcomes are teaching models, not empirical production forecasts.
 
@@ -82,7 +82,7 @@ Primary conceptual references checked November 20, 2026:
 
 The game introduces foundations. It does not grant a professional Kanban, Lean, Toyota, or MBA credential.
 
-## Version 1.2.0: agency and visible results
+## Historical version 1.2.0: agency and visible results (inventory retired in v1.4.0)
 
 All thirteen optional flavor detours were replaced with usable field-tool choices. Every tool has one use and a stated capability. Field jobs accept matching gear, one of two starting-gadget uses, a finite supply pack, an extra crew shift, or deferral. A ledger makes these resource choices persistent and allows alternative plans to be compared without duplicate spending.
 
@@ -95,3 +95,9 @@ For early planning missions, a complete but flawed plan can now run. The team re
 Core project-management terms remain in the player lessons. The same three promised hub parts now appear throughout needs, scope, work breakdown, budget, and acceptance checks. Quiet space is actually tested. Capacity uses hours. The risk practice explicitly tests hypothetical events; a contingency reserve covers a possible broken part. The change-control activity compares approved added scope with deferral, without assuming the player owns optional decorations. Planned added work remains distinct from avoidable rework when calculating delivery time.
 
 The jidoka, just-in-time, and respect-for-people explanations were rechecked against [Toyota’s primary account](https://global.toyota/en/company/vision-and-philosophy/production-system/). No Toyota passages or assets were copied. These remain simplified teaching models. See QA-v1.3.5.md for the review and validation record.
+
+## Current web game, v1.4.0
+
+The adventure inventory, supply packs, tool-use limits, route slots, upgrade gates, and reduced-delivery scoring have been removed. They were extra game rules rather than necessary project-management concepts. Each learning activity now reports its own consequences without deducting delivery points. Story choices are direct actions with immediate results and later story callbacks. The player chooses the first neighborhood visit; all three neighborhoods receive visits.
+
+Budget, resource capacity, and pull replenishment remain learning goals. Their tokens, hours, and boxes of pencils belong to their respective exercises. The earlier source and historical implementation records above remain for provenance; they do not describe the current gameplay. Desktop releases remain paused.

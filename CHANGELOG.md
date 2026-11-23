@@ -1,5 +1,13 @@
 # Releases
 
+## 1.4.0 (website only)
+
+- Removed the cross-game tool inventory, supply packs, gadget uses, route slots, city-upgrade gates, and delivery penalties.
+- Replaced city jobs with two straightforward story actions and immediate results, remembered later in the story and ending.
+- Simplified the ending to choosing the first neighborhood; the rover visits all three.
+- Kept budget, capacity, and kanban quantities inside their learning activities. Kanban now uses familiar boxes of pencils.
+- Preserved lesson progress and old saves, with no desktop builds or release tags.
+
 ## 1.3.5 (website only)
 
 - Used the same Clear path, Message desk, and Quiet space names in requirements, scope, work lists, budgets, checks, and answers.

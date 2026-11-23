@@ -1,3 +1,4 @@
+// Legacy 1.3 save validation only. The current web game does not use this inventory or route system.
 // A saved decision ledger makes tools finite without silently spending them twice.
 export const types={reach:'Reach high places',scan:'Find a hidden problem',sort:'Sort mixed parts',signal:'Send a message to a crew',shelter:'Keep work dry or shaded',carry:'Carry a light load',crew:'Bring a helper',repair:'Make a quick repair'};
 export const finds=[
