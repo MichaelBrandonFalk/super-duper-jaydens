@@ -1,6 +1,6 @@
 # Consistent learning context
 
-Current web wording: v1.4.5, reviewed November 23, 2026.
+Current web wording: v1.4.6, reviewed November 23, 2026.
 
 The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
@@ -29,3 +29,5 @@ Separate deliveries completed from buffer readiness: all six deliveries can be s
 Incomplete-activity prompts must identify the missing action. An over-budget plan needs a lower cost, not more selections. A stopped printer still needs its holder fitted and tested. Choice reviews name the selected category and explain the concept. Open saved reviews when a choice needs correction; keep successful reviews collapsed.
 
 Saving an experiment is different from adopting its change. Use Save our test results for the improvement activity; an ineffective change should not receive a positive work-system review. Read-aloud targets include current questions, choices, and story decisions without nested duplicate targets. Before a first result exists, navigate to Try it with a matching URL and a short explanation.
+
+Result summaries name the actual missing needs, unwanted extras, overloaded helper and hours, or failed risk response. Do not count unwanted ideas as extra hub parts. Needs reviews state whether an item was added or left off. Change our plan preserves answers in editable activities; Try this activity again starts a fresh board, quality, or launch run while retaining the saved result.

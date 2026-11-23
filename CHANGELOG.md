@@ -1,3 +1,11 @@
+# v1.4.6 · Concrete consequences and easier corrections
+
+- Needs results list missing requirements and unrequested extras instead of counting them as extra hub parts. Reviews say whether each item was added or left off.
+- Capacity results name the overloaded helper and compare planned hours with available hours.
+- Risk results and reviews use the same specific consequences, including the workload caused by assigning every job to Jayden.
+- Change our plan preserves current answers in editable activities. Board, quality, and launch replays use Try this activity again and start a fresh run.
+- Desktop releases remain paused.
+
 # v1.4.5 · Experiments, reading, and first results
 
 - Improvement practice saves test results rather than asking players to keep a change that did not help. Its review explains why a poster or faster work does not remove trips. Story choices share test results, including unsuccessful tests.

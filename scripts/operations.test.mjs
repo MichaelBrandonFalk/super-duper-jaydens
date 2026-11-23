@@ -54,3 +54,14 @@ test('sorting reviews show the chosen category and explain the relevant concept'
  const scope=help(3,newActivity(3));scope.picks[0]=1;assert.match(feedbackFor(3,scope)[0].text,/You chose Later.*neighbors need/);
  const groups=help(4,newActivity(4));groups.picks[0]=2;assert.match(feedbackFor(4,groups)[0].text,/You chose Quiet space.*Clear path/);
 });
+
+test('needs results name missing requirements and unrequested extras without inventing extra hub parts',()=>{
+ const g=help(2,newActivity(2));g.picks={0:0,1:0,2:0,3:1,4:0};const result=missionResult(2,g);assert.equal(result.ready,true);assert.match(result.story,/leaves out Clear path, Quiet space and Message desk/);assert.match(result.story,/No neighbor asked for Giant spinning sign/);assert.doesNotMatch(result.story,/4 parts|Moon base/);
+ const extras=help(2,newActivity(2));extras.picks[4]=1;assert.doesNotMatch(missionResult(2,extras).story,/leaves out/);assert.match(missionResult(2,extras).story,/Moon base/);
+});
+test('capacity results identify the overloaded helper and compare planned work with available hours',()=>{
+ const g=help(6,newActivity(6));g.owners=['jayden','bolt','bolt','bolt'];assert.match(missionResult(6,g).story,/Bolt has 4 hours of work but only 2 hours available/);assert.doesNotMatch(missionResult(6,g).story,/Jayden has 4/);assert.equal(missionResult(6,g).ready,true);
+});
+test('risk results explain only the responses that failed and agree with each review',()=>{
+ for(let i=0;i<3;i++){const g=help(9,newActivity(9));g.picks[i]=1-g.picks[i];const result=missionResult(9,g),failed=feedbackFor(9,g).filter(r=>!r.ok);assert.equal(failed.length,1);assert.ok(result.story.endsWith(failed[0].text));if(i===2){assert.match(result.story,/Giving him every job/);assert.doesNotMatch(result.story,/backup is missing|parts get wet|stops every job/);}}
+});
