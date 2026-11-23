@@ -1,6 +1,6 @@
-import {workGroups} from './learning-content.js?v=1.4.4';
-import {fieldTotals} from './adventure.js?v=1.4.4';
-import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.4';
+import {workGroups} from './learning-content.js?v=1.4.5';
+import {fieldTotals} from './adventure.js?v=1.4.5';
+import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.5';
 export const demand=[1,2,1,2];
 export function flowState(choices=[]){let stock=2,served=0,waiting=0,extra=0,delay=0;const log=[];for(const [round,n] of choices.slice(0,4).entries()){const sent=Math.min(stock,demand[round]);waiting+=demand[round]-sent;served+=sent;stock=stock-sent+n;extra+=Math.max(0,stock-2);delay+=Math.max(0,n-2);log.push({round:round+1,need:demand[round],sent,made:n,stock});}return {stock,served,waiting,extra,delay,log,round:log.length};}
 const boxes=n=>n+' '+(n===1?'box':'boxes');
@@ -17,7 +17,7 @@ export function feedbackFor(id,g){const out=[],add=(label,ok,text)=>out.push({la
  if(id===9)riskCards.forEach((r,i)=>add(r.name,g.picks[i]===r.right,g.picks[i]===undefined?'Choose a response.':g.picks[i]===r.right?['The cover keeps the spare parts dry.','Spare paper lets the team work while the delivery is late.','The backup helper can do the job while the first helper is away.'][i]:['Wet spare parts need time to dry.','Without spare paper, the team waits for the delivery.','Without a backup, the work waits for a helper.'][i]));
  if(id===10){tests.forEach((t,i)=>add(t.name,g.tested.includes(i),g.tested.includes(i)?'The fix passed its check.':'Inspect, fix, and retest this part.'));add('Printer response',g.qualityMode===0&&g.qualityKey,g.qualityMode===null?'Choose a response to the crooked card.':g.qualityMode===1?'Running on spreads the fault. The faulty cards need to be printed again.':g.qualityKey?'The team fixed the card holder and checked its work.':'Call for support, fit the shaped card holder, and test before restarting.');}
  if(id===11){add('Landing pad decision',[0,2].includes(g.change),g.change===0?'The extra work takes two hours, so the hub opens two hours later.':g.change===null?'Choose whether to build the landing pad now or save it for later.':g.change===1?'This is an earlier swap plan. Choose one of the updated options to try this mission again.':'The landing pad is saved for a later project.');add('Team agreement',g.approved,g.approved?'The neighbors know and agree to this plan.':'Agree the plan with the neighbors before trying it.');}
- if(id===12){add('Measured result',g.layout===1,g.rounds.length+' test rounds: '+g.rounds.join(', ')+' trips. Our first rounds took 8 and 8.');add('Work system',g.layout!==2,g.layout===2?'Asking Bolt to hurry leaves the long trips in place. Change the layout instead of adding pressure.':'Look for work the layout can remove.');}
+ if(id===12){add('Measured result',g.layout===1,g.rounds.length+' test rounds: '+g.rounds.join(', ')+' trips. Our first rounds took 8 and 8.');add('Work system',g.layout===1,g.layout===1?'Moving the cards beside the scanner removes fetching trips.':g.layout===2?'Asking Bolt to hurry leaves the long trips in place. Change the layout instead of adding pressure.':g.layout===0?'A poster changes how the room looks. It does not shorten the trips.':'Choose a change to test.');}
  if(id===13)finalActs.forEach((a,i)=>add(a.title,g.answers[i]===a.right,g.answers[i]===undefined?'Choose a plan for this scene.':g.answers[i]===a.right?a.why:finalRepairs[i]));
  return out;
 }
@@ -33,7 +33,7 @@ export function missionResult(id,g){let ready=evaluate(id,g).ok,delay=0,story=''
  if(id===9){ready=riskCards.every((r,i)=>[0,1].includes(g.picks[i]));delay=riskCards.filter((r,i)=>g.picks[i]!==r.right).length;story=delay?'In this practice, it rains, the paper delivery is late, and a helper is away. '+delay+' job'+(delay===1?' has to wait because its backup is missing.':'s have to wait because their backups are missing.'):'In this practice, the rain cover, spare paper, and backup helper keep all three jobs moving.';}
  if(id===10){ready=g.tested.length===3&&g.qualityMode!==null&&(g.qualityMode===1||g.qualityKey);delay=g.qualityMode===1?2:0;story=delay?'The printer kept running after the card holder slipped. Six cards need checking and printing again. That means extra work before launch.':'The team stopped at the first bad card, fixed the card holder, and tested it. A shaped slot now keeps new cards lined up.';}
  if(id===11){ready=[0,2].includes(g.change)&&g.approved;delay=g.change===0?2:0;story=g.change===0?'The neighbors agree to wait for the landing pad. Building it takes two extra hours, so the hub opens two hours later.':g.change===1?'This earlier plan needs a new choice in the updated activity.':'This request adds no time to the current project. The landing pad is saved for a later project.';}
- if(id===12){ready=g.layout!==null&&g.rounds.length===2;delay=g.layout===1?0:1;story=g.layout===1?'Two tests took 4 and 5 trips, compared with 8 and 8 before. We keep the cards beside the scanner and check the process again next time.':'Two tests still took 8 and 8 trips. The long route remains, so checking the cards takes extra time.';}
+ if(id===12){ready=g.layout!==null&&g.rounds.length===2;delay=g.layout===1?0:1;story=g.layout===1?'Two tests took 4 and 5 trips, compared with 8 and 8 before. We keep the cards beside the scanner and check the process again next time.':'Both tests took 8 trips, just as before. This change did not reduce the trips. We need another change to improve the work.';}
  if(id===13){delay=g.answers.reduce((n,a,i)=>n+(a!==finalActs[i].right?1:0),0);story=delay?'The crew fixed '+delay+' problem'+(delay===1?'':'s')+' in the launch plan. The fixes took extra work before launch.':'The rover passed its checks and the library team received its care card. This launch plan adds no delays. Now choose the first neighborhood to visit.';}
  return {ready,delay,story,checks:feedbackFor(id,g)};
 }
@@ -54,7 +54,7 @@ export function unfinishedMessage(id,g){
  if(id===9)return 'Choose one response for each of the three risks.';
  if(id===10)return g.tested.length<3?'Inspect, fix, and test all three hub parts.':g.qualityMode===null?'Choose whether to stop the printer or keep it running.':'Fit the shaped card holder and test it. Then choose See the printer result.';
  if(id===11)return ![0,2].includes(g.change)?'Choose whether to build the landing pad now or save it for later.':'Choose Agree this plan with our neighbors before you try the plan.';
- if(id===12)return g.layout===null?'Choose a change before running a test.':'Run both tests before keeping the plan.';
+ if(id===12)return g.layout===null?'Choose a change before running a test.':'Run both tests before saving the results.';
  if(id===13)return 'Choose a plan in each of the five launch scenes.';
  return 'Finish each part of this activity, then try the plan again.';
 }

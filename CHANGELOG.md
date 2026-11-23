@@ -1,3 +1,11 @@
+# v1.4.5 · Experiments, reading, and first results
+
+- Improvement practice saves test results rather than asking players to keep a change that did not help. Its review explains why a poster or faster work does not remove trips. Story choices share test results, including unsuccessful tests.
+- Opening Our plan before the first completed attempt now navigates to Try it with a matching URL and a short explanation.
+- Read-aloud includes activity questions, choice labels, story decisions, team-color choices, and final neighborhood visits.
+- Closure wording names the library team’s continuing care of the rover.
+- Desktop releases remain paused.
+
 # v1.4.4 · Specific prompts and explanations
 
 - Incomplete activities name the next action instead of asking for choices that are already made. Overspending identifies the actual cost and budget; an unfinished printer fix identifies the missing test.

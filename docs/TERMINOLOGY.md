@@ -1,6 +1,6 @@
 # Consistent learning context
 
-Current web wording: v1.4.4, reviewed November 23, 2026.
+Current web wording: v1.4.5, reviewed November 23, 2026.
 
 The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
@@ -27,3 +27,5 @@ Story order: make the hub plan, budget for it, build it, then check it. Early ro
 Separate deliveries completed from buffer readiness: all six deliveries can be sent while the final buffer is empty. Report both. Budget records describe planned spending and reserve before the replacement test. Finale capacity describes available time explicitly; avoid phrases such as a person being full.
 
 Incomplete-activity prompts must identify the missing action. An over-budget plan needs a lower cost, not more selections. A stopped printer still needs its holder fitted and tested. Choice reviews name the selected category and explain the concept. Open saved reviews when a choice needs correction; keep successful reviews collapsed.
+
+Saving an experiment is different from adopting its change. Use Save our test results for the improvement activity; an ineffective change should not receive a positive work-system review. Read-aloud targets include current questions, choices, and story decisions without nested duplicate targets. Before a first result exists, navigate to Try it with a matching URL and a short explanation.

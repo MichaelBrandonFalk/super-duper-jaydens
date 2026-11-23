@@ -335,7 +335,7 @@ export const missions=[
     "lesson": "Kaizen is a Japanese word for improvement. We improve the way the work is done, try the change, and check what happened.",
     "example": "Use the plan-do-check-act cycle, or PDCA. Plan: move the cards beside the scanner. Do: try two rounds. Check: count the trips. Act: keep a useful change or try another one.",
     "task": "Make the work a little better",
-    "instruction": "Choose one change. Run the first test, then the second. Compare the trips with the baseline: the two rounds before the change, with eight trips each. Keep the plan or choose another change.",
+    "instruction": "Choose one change. Run the first test, then the second. Compare both results with the baseline: eight trips in each round before the change. Choose Save our test results, or choose another change to test.",
     "win": "Two tests give us evidence for a layout decision. We will keep checking next time.",
     "keepsake": "Improve the way we work, then check the result.",
     "adult": {
@@ -362,7 +362,7 @@ export const missions=[
     "example": "Neighbors try the rover to check that it meets their needs. The library team gets its care card and agrees to look after it. That is our handover. Then we can close the launch project.",
     "task": "Launch our Signal Rover",
     "instruction": "Read each scene and choose a plan. The next scene shows what happened. A repair takes extra work before launch. After all five scenes, review the result. Then visit our neighbors.",
-    "win": "The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project has a finish, and the good it makes can carry on.",
+    "win": "The neighbors have tried the rover and accepted it. Our care card says who will keep it ready. This project is finished. The library team will keep the rover ready to use.",
     "keepsake": "Finish, hand over, learn, and thank the team.",
     "adult": {
       "term": "Integrated delivery and project closure",
