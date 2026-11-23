@@ -42,3 +42,15 @@ test('sending every delivery does not hide an empty or excessive final buffer',(
   if(stock===0)assert.match(result.story,/needs 2 more boxes before the next visit/);if(stock===3)assert.match(result.story,/packed more than we need/);
  }
 });
+
+test('unfinished feedback identifies missing choices, overspending, and the pending printer test',async()=>{
+ const {unfinishedMessage}=await import('../operations.js');const budget=newActivity(7);
+ assert.match(unfinishedMessage(7,budget),/Choose one option/);budget.budget=[1,1,1,2];assert.match(unfinishedMessage(7,budget),/14 tokens.*11.*lower-cost/);
+ const quality=newActivity(10);assert.match(unfinishedMessage(10,quality),/all three hub parts/);quality.tested=[0,1,2];assert.match(unfinishedMessage(10,quality),/whether to stop/);quality.qualityMode=0;assert.match(unfinishedMessage(10,quality),/card holder and test/);assert.doesNotMatch(unfinishedMessage(10,quality),/all three hub parts/);
+ const change=newActivity(11);assert.match(unfinishedMessage(11,change),/whether to build/);change.change=0;assert.match(unfinishedMessage(11,change),/Agree this plan/);
+});
+test('sorting reviews show the chosen category and explain the relevant concept',()=>{
+ const g=help(1,newActivity(1));g.picks[0]=1;assert.match(feedbackFor(1,g)[0].text,/You chose Operations.*project/);
+ const scope=help(3,newActivity(3));scope.picks[0]=1;assert.match(feedbackFor(3,scope)[0].text,/You chose Later.*neighbors need/);
+ const groups=help(4,newActivity(4));groups.picks[0]=2;assert.match(feedbackFor(4,groups)[0].text,/You chose Quiet space.*Clear path/);
+});

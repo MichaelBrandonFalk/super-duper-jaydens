@@ -1,6 +1,6 @@
 # Consistent learning context
 
-Current web wording: v1.4.3, reviewed November 23, 2026.
+Current web wording: v1.4.4, reviewed November 23, 2026.
 
 The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
@@ -25,3 +25,5 @@ Saved plan summaries must describe the player’s tested choices, including choi
 Story order: make the hub plan, budget for it, build it, then check it. Early route work uses drawings and job cards; the Quiet space is used after it is built. The optional landing pad changes the hub opening by two hours. The Signal Rover launch is the new project in issue 13. Activity captions must use the same units and names as the lesson. Saved review feedback belongs to the tested plan, never an unfinished replay.
 
 Separate deliveries completed from buffer readiness: all six deliveries can be sent while the final buffer is empty. Report both. Budget records describe planned spending and reserve before the replacement test. Finale capacity describes available time explicitly; avoid phrases such as a person being full.
+
+Incomplete-activity prompts must identify the missing action. An over-budget plan needs a lower cost, not more selections. A stopped printer still needs its holder fitted and tested. Choice reviews name the selected category and explain the concept. Open saved reviews when a choice needs correction; keep successful reviews collapsed.

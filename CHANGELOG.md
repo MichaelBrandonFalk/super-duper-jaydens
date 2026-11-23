@@ -1,3 +1,11 @@
+# v1.4.4 · Specific prompts and explanations
+
+- Incomplete activities name the next action instead of asking for choices that are already made. Overspending identifies the actual cost and budget; an unfinished printer fix identifies the missing test.
+- Project/operations, scope, and work-list reviews name the player’s chosen category before explaining it. Risk responses explain the concrete effect of the cover, paper, or backup helper.
+- Corrective reviews open automatically on saved results that need changes. Successful reviews stay collapsed.
+- Replaced the wrong-schedule description in issue 1 with the actual sorting mistake, and matched the kaizen explanation to asking Bolt to hurry.
+- Desktop releases remain paused.
+
 # v1.4.3 · Clear rules and consequences
 
 - Kanban results distinguish completed deliveries from an empty, full, or excessive final buffer. Instructions explain why the last practice round still replenishes stock.

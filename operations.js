@@ -1,28 +1,28 @@
-import {workGroups} from './learning-content.js?v=1.4.3';
-import {fieldTotals} from './adventure.js?v=1.4.3';
-import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.3';
+import {workGroups} from './learning-content.js?v=1.4.4';
+import {fieldTotals} from './adventure.js?v=1.4.4';
+import {projectCards,needCards,scopeCards,workCards,orderCards,teamTasks,costs,riskCards,tests,loads,budgetTotal,evaluate,finalActs,finalRepairs,artifact} from './engine.js?v=1.4.4';
 export const demand=[1,2,1,2];
 export function flowState(choices=[]){let stock=2,served=0,waiting=0,extra=0,delay=0;const log=[];for(const [round,n] of choices.slice(0,4).entries()){const sent=Math.min(stock,demand[round]);waiting+=demand[round]-sent;served+=sent;stock=stock-sent+n;extra+=Math.max(0,stock-2);delay+=Math.max(0,n-2);log.push({round:round+1,need:demand[round],sent,made:n,stock});}return {stock,served,waiting,extra,delay,log,round:log.length};}
 const boxes=n=>n+' '+(n===1?'box':'boxes');
 export function bufferSummary(f){return boxes(f.stock)+' ready for next time. '+(f.stock<2?'The buffer needs '+(2-f.stock)+' more '+(2-f.stock===1?'box':'boxes')+' before the next visit.':f.stock>2?'Our target is two boxes; we packed more than we need.':'Our two-box buffer is ready.');}
 export function feedbackFor(id,g){const out=[],add=(label,ok,text)=>out.push({label,ok,text});
- if(id===1)projectCards.forEach(([t,r],i)=>add(t,g.picks[i]===r,g.picks[i]===undefined?'Choose Project or Operations for this job.':r===0?'A new result with a finish makes this a project.':'This is operations: work we repeat to keep things working.'));
+ if(id===1)projectCards.forEach(([t,r],i)=>add(t,g.picks[i]===r,g.picks[i]===undefined?'Choose Project or Operations for this job.':'You chose '+(g.picks[i]===0?'Project. ':'Operations. ')+(r===0?'This job makes something new with a finish, so it is a project.':'This job repeats to keep things working, so it is operations.')));
  if(id===2)needCards.forEach((t,i)=>add(t,i<3?g.picks[i]===1&&g.seen.includes(i):g.picks[i]!==1,i<3?(!g.seen.includes(i)?'Open this neighbor’s note.':'This is a need a neighbor asked us to keep.'):'No neighbor asked for this in the current mission.'));
- if(id===3)scopeCards.forEach((t,i)=>add(t,g.picks[i]===(i<3?0:1),i<3?'Keep this in the hub promise.':'Save this idea for a later project.'));
- if(id===4)workCards.forEach(([t,r],i)=>add(t,g.picks[i]===r,'This job belongs on the '+workGroups[r]+' work list.'));
+ if(id===3)scopeCards.forEach((t,i)=>add(t,g.picks[i]===(i<3?0:1),g.picks[i]===undefined?'Choose This project or Later.':'You chose '+(g.picks[i]===0?'This project. ':'Later. ')+(i<3?'Our neighbors need this part in the hub.':'This idea is outside our agreed scope. Save it for a later project.')));
+ if(id===4)workCards.forEach(([t,r],i)=>add(t,g.picks[i]===r,(g.picks[i]===undefined?'Choose a work list. ':'You chose '+workGroups[g.picks[i]]+'. ')+'This job belongs on the '+workGroups[r]+' work list.'));
  if(id===5)g.order.forEach((n,i)=>add(orderCards[n],n===i,'Step '+(n+1)+' in the working order: '+orderCards[n]+'.'));
  if(id===6){const use=loads(g);teamTasks.forEach((t,i)=>add(t.name,t.can.includes(g.owners[i]),g.owners[i]?'Assigned to '+g.owners[i][0].toUpperCase()+g.owners[i].slice(1)+'.':'Choose a helper.'));Object.entries(use).forEach(([n,v])=>add(n[0].toUpperCase()+n.slice(1),v<=({jayden:3,mika:3,bolt:2}[n]),v+' '+(v===1?'hour':'hours')+' planned; '+({jayden:3,mika:3,bolt:2}[n])+' hours available. '+(v>({jayden:3,mika:3,bolt:2}[n])?'This helper needs more time or help with a job.':'This load fits.')));}
  if(id===7){costs.forEach((c,i)=>add(c.name,g.budget[i]>=0,g.budget[i]>=0?c.options[g.budget[i]][0]+': '+c.options[g.budget[i]][1]+' '+(c.options[g.budget[i]][1]===1?'token.':'tokens.'):'Choose this needed part.'));add('Total cost',budgetTotal(g)<=11,budgetTotal(g)+' tokens planned; 11 available. A plan must fit the jar before we can run it.');add('Reserve',budgetTotal(g)<=10,(budgetTotal(g)>11?'No reserve: the plan is over budget.':(11-budgetTotal(g))+' '+(11-budgetTotal(g)===1?'token remains.':'tokens remain.'))+' In the practice, a replacement costs one token.');}
  if(id===8){const f=flowState(g.flowChoices);add('Library deliveries',f.waiting===0,f.served+' of 6 boxes sent; '+f.waiting+' '+(f.waiting===1?'box':'boxes')+' delayed.');add('Stock',f.extra===0&&f.stock===2,bufferSummary(f)+(f.extra?' Extra boxes needed storage during the practice.':''));}
- if(id===9)riskCards.forEach((r,i)=>add(r.name,g.picks[i]===r.right,g.picks[i]===undefined?'Choose a response.':g.picks[i]===r.right?'This response keeps that part of the mission moving.':['Wet spare parts need time to dry.','Without spare paper, the team waits for the delivery.','Without a backup, the work waits for a helper.'][i]));
+ if(id===9)riskCards.forEach((r,i)=>add(r.name,g.picks[i]===r.right,g.picks[i]===undefined?'Choose a response.':g.picks[i]===r.right?['The cover keeps the spare parts dry.','Spare paper lets the team work while the delivery is late.','The backup helper can do the job while the first helper is away.'][i]:['Wet spare parts need time to dry.','Without spare paper, the team waits for the delivery.','Without a backup, the work waits for a helper.'][i]));
  if(id===10){tests.forEach((t,i)=>add(t.name,g.tested.includes(i),g.tested.includes(i)?'The fix passed its check.':'Inspect, fix, and retest this part.'));add('Printer response',g.qualityMode===0&&g.qualityKey,g.qualityMode===null?'Choose a response to the crooked card.':g.qualityMode===1?'Running on spreads the fault. The faulty cards need to be printed again.':g.qualityKey?'The team fixed the card holder and checked its work.':'Call for support, fit the shaped card holder, and test before restarting.');}
  if(id===11){add('Landing pad decision',[0,2].includes(g.change),g.change===0?'The extra work takes two hours, so the hub opens two hours later.':g.change===null?'Choose whether to build the landing pad now or save it for later.':g.change===1?'This is an earlier swap plan. Choose one of the updated options to try this mission again.':'The landing pad is saved for a later project.');add('Team agreement',g.approved,g.approved?'The neighbors know and agree to this plan.':'Agree the plan with the neighbors before trying it.');}
- if(id===12){add('Measured result',g.layout===1,g.rounds.length+' test rounds: '+g.rounds.join(', ')+' trips. Our first rounds took 8 and 8.');add('Work system',g.layout!==2,g.layout===2?'Faster wheels leave the long route in place. Change the layout instead of adding pressure.':'Look for work the layout can remove.');}
+ if(id===12){add('Measured result',g.layout===1,g.rounds.length+' test rounds: '+g.rounds.join(', ')+' trips. Our first rounds took 8 and 8.');add('Work system',g.layout!==2,g.layout===2?'Asking Bolt to hurry leaves the long trips in place. Change the layout instead of adding pressure.':'Look for work the layout can remove.');}
  if(id===13)finalActs.forEach((a,i)=>add(a.title,g.answers[i]===a.right,g.answers[i]===undefined?'Choose a plan for this scene.':g.answers[i]===a.right?a.why:finalRepairs[i]));
  return out;
 }
 export function missionResult(id,g){let ready=evaluate(id,g).ok,delay=0,story='';
- if(id===1){ready=projectCards.every((c,i)=>[0,1].includes(g.picks[i]));delay=projectCards.filter((c,i)=>g.picks[i]!==c[1]).length;story=delay?'The team planned '+delay+' job'+(delay===1?'':'s')+' with the wrong kind of schedule. Sorting out the repeats and finishes means correcting the plan before work starts.':'The new projects have a finish, and the daily jobs have a repeat plan. The crew can get started.';}
+ if(id===1){ready=projectCards.every((c,i)=>[0,1].includes(g.picks[i]));delay=projectCards.filter((c,i)=>g.picks[i]!==c[1]).length;story=delay?delay+' job'+(delay===1?' was':'s were')+' sorted into the wrong group. The crew separates projects from operations before work starts.':'The new projects have a finish, and the daily jobs have a repeat plan. The crew can get started.';}
  if(id===2){ready=[0,1,2].every(i=>g.seen.includes(i))&&Object.values(g.picks).some(n=>n===1);delay=[0,1,2].filter(i=>g.picks[i]!==1).length+[3,4].filter(i=>g.picks[i]===1).length;story=delay?'The neighbors try our plan. Missing needs and unneeded extras send '+delay+' part'+(delay===1?'':'s')+' back to planning. The team fixes them before opening.':'Our plan includes all three requirements: Clear path, Quiet space, and Message desk.';}
  if(id===3){ready=scopeCards.every((c,i)=>[0,1].includes(g.picks[i]));delay=scopeCards.filter((c,i)=>g.picks[i]!== (i<3?0:1)).length;story=delay?'The crew has to revisit '+delay+' scope decision'+(delay===1?'':'s')+'. They restore the needed work and save the extra projects for later. The team replans before building.':'The crew knows the agreed finish. Needed work fits, and extra ideas stay on the Later list.';}
  if(id===4){ready=workCards.every((c,i)=>[0,1,2].includes(g.picks[i]));delay=workCards.filter((c,i)=>g.picks[i]!==c[1]).length;story=delay?'The crew finds '+delay+' job card'+(delay===1?'':'s')+' on the wrong work list. The team puts each card on the right list before sharing the work.':'Each part of the hub has the jobs it needs on its work list. No job cards need moving.';}
@@ -42,3 +42,19 @@ export function cityOutcome(p){const reports=Object.values(p.reports||{}),field=
 
 // Saved results must never describe an unfinished replacement plan.
 export function savedFeedback(p,id){const report=p.reports?.[id];if(Array.isArray(report?.checks))return report.checks;const g=p.games?.[id];return g?.checked&&p.plans?.[id]===artifact(id,g)?feedbackFor(id,g):[];}
+
+export function unfinishedMessage(id,g){
+ if(id===1)return 'Choose Project or Operations for all four jobs.';
+ if(id===2)return 'Open all three neighbor notes, then choose what to put on our needs list.';
+ if(id===3)return 'Choose This project or Later for all five ideas.';
+ if(id===4)return 'Choose a work list for all six jobs.';
+ if(id===6)return 'Choose a helper for each of the four jobs.';
+ if(id===7)return g.budget.slice(0,3).some(n=>n<0)?'Choose one option for each of the three hub parts.':'Your plan costs '+budgetTotal(g)+' tokens. We have 11. Choose a lower-cost option, then try the plan again.';
+ if(id===8)return g.board.some(n=>n!==2)?'Finish all four jobs on the board. Then send pencils to the library.':'Complete all four library requests. Choose how many boxes to pack in each round.';
+ if(id===9)return 'Choose one response for each of the three risks.';
+ if(id===10)return g.tested.length<3?'Inspect, fix, and test all three hub parts.':g.qualityMode===null?'Choose whether to stop the printer or keep it running.':'Fit the shaped card holder and test it. Then choose See the printer result.';
+ if(id===11)return ![0,2].includes(g.change)?'Choose whether to build the landing pad now or save it for later.':'Choose Agree this plan with our neighbors before you try the plan.';
+ if(id===12)return g.layout===null?'Choose a change before running a test.':'Run both tests before keeping the plan.';
+ if(id===13)return 'Choose a plan in each of the five launch scenes.';
+ return 'Finish each part of this activity, then try the plan again.';
+}
