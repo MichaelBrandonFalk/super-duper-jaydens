@@ -1,5 +1,9 @@
 # Desktop editions and releases
 
+## Release pause
+
+At the user's request on November 23, 2026, desktop builds and download releases are paused until explicitly requested again. Continue improving and publishing the website. Do not build desktop packages, create release tags, or dispatch the desktop workflow during this pause. Automatic tag-triggered builds are disabled. The v1.3.4 desktop workflow was cancelled before publication; the Downloads page retains the tested v1.3.3 files.
+
 ## Downloads
 
 The game’s Downloads page reads the checked-in downloads.json catalog. Only a complete set of tested release files creates live buttons. Each filename includes its version.

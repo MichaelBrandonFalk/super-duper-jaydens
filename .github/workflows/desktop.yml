@@ -1,7 +1,7 @@
 name: Build and publish desktop downloads
 on:
-  push:
-    tags: ['v*']
+  # Automatic desktop releases paused at the user's request, November 23, 2026.
+  # Restore tag-triggered builds only when the user asks to resume downloads.
   workflow_dispatch:
 permissions:
   contents: read
