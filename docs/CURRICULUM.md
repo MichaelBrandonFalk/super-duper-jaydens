@@ -6,7 +6,7 @@ Reviewed November 20, 2026. Super Duper Jaydens! is an independent, original edu
 
 1. **Project Management – 2nd Edition, chapter 2: Project Management Overview.** © 2014 Adrienne Watt; Project Management Open Resources; TAP-a-PM. Chapter text is marked [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except noted materials. Its upstream “Project Attributes,” “Project Characteristics,” “Process of Project Management,” and “Project Management Expertise” credits name Project Management Open Resources and TAP-a-PM under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). We retain these credits. Conceptual foundation for projects, outcomes, people, constraints, and coordination. All fictional examples and explanatory wording in this game are new. The chapter’s media and cultural color table are not reused.
    https://opentextbc.ca/projectmanagement/chapter/chapter-2-what-is-a-project-project-management/
-2. **Project Management Basics: Activity Sequencing**, Sharon Blanchard, Kirkwood Community College. The selected chapter footer is marked [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except noted material. Used as a conceptual reference for predecessors and work order. The original sign exercise was replaced by a superhero signal-relay exercise. No wedding narrative, chapter image, or video is reused.
+2. **Project Management Basics: Activity Sequencing**, Sharon Blanchard, Kirkwood Community College. The selected chapter footer is marked [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except noted material. Used as a conceptual reference for predecessors and work order. The original sign exercise was replaced by an original Clear path job-order exercise. No wedding narrative, chapter image, or video is reused.
    https://kirkwood.pressbooks.pub/projectmanagementbasics/chapter/activity-sequencing/
 3. **SPC and Lean Manufacturing, chapter 1: Introduction to Lean Manufacturing**, Andrea Bearman and Roberta Gagnon, PALNI Press. Marked [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except noted material. Conceptual reference for process observation and continuous improvement. No third-party passages, figures, video, linked articles, or exercises are copied. The signal-card experiment is original.
    https://pressbooks.palni.org/spcleanmanufacturing/chapter/chapter-1/
@@ -43,16 +43,16 @@ The game introduces visible work, work-in-progress limits, and small iterative i
 
 | Issue | Fictional fieldwork | Concept | MBA connection |
 | --- | --- | --- | --- |
-| 1 | Name a new city beacon project | Project versus operations | Strategy and operations |
+| 1 | Sort new Clear path work and repeated operations | Project versus operations | Strategy and operations |
 | 2 | Hear neighbors’ needs for the Hero Hub | Stakeholders and requirements | Customer value and engagement |
 | 3 | Agree the Hero Hub promise | Scope and acceptance criteria | Charter and governance |
-| 4 | Break a hero kit into work bays | Work breakdown | Operations design |
-| 5 | Plan, build, test, and activate a relay | Dependencies | Scheduling and critical-path context |
+| 4 | Break Clear path, Message desk, and Quiet space into work lists | Work breakdown | Operations design |
+| 5 | Plan, build, test, and open Clear path | Dependencies | Scheduling and critical-path context |
 | 6 | Share signal and skyway work | Capacity and skills | Organizational behavior and resources |
 | 7 | Buy useful gear and keep a reserve | Budget and contingency | Managerial finance and opportunity cost |
 | 8 | Run Mission Control with a two-job limit | Visual workflow and WIP | Flow and queue management |
 | 9 | Prepare proportionate gear and team backups | Risk | Decision-making under uncertainty |
-| 10 | Inspect, fix, and retest Hub access and controls | Quality | Verification and user acceptance |
+| 10 | Inspect, fix, and retest Quiet space, Clear path, and Message desk | Quality | Verification and user acceptance |
 | 11 | Evaluate a drone-dock request | Change control | Governance and trade-offs |
 | 12 | Move signal cards and measure the trips | Kaizen and iteration | Lean operations and learning |
 | 13 | Launch and hand over the Signal Rover | Integration and closure | Delivery, benefits, and operational ownership |
@@ -89,3 +89,9 @@ All thirteen optional flavor detours were replaced with usable field-tool choice
 City upgrades alter later options. District delivery routes require specific links; the map bench increases reachable stops, the workshop recovers a supply pack, and the test bay recovers one delayed shift. Players allocate the final route and see delivered versus deferred stops per district. Their starting priority signal reserves one available stop in its district. The model makes trade-offs visible; these are fictional resource rules, not industrial performance claims.
 
 For early planning missions, a complete but flawed plan can now run. The team repairs its gaps, the repair time is recorded, and the final route changes. Results retain the player’s actual tested choices and explain each decision. Incomplete selections still require a complete plan. WIP and dependency constraints remain explicit workflow rules.
+
+## Web clarity review, November 23, 2026 (v1.3.5)
+
+Core project-management terms remain in the player lessons. The same three promised hub parts now appear throughout needs, scope, work breakdown, budget, and acceptance checks. Quiet space is actually tested. Capacity uses hours. The risk practice explicitly tests hypothetical events; a contingency reserve covers a possible broken part. The change-control activity compares approved added scope with deferral, without assuming the player owns optional decorations. Planned added work remains distinct from avoidable rework when calculating delivery time.
+
+The jidoka, just-in-time, and respect-for-people explanations were rechecked against [Toyota’s primary account](https://global.toyota/en/company/vision-and-philosophy/production-system/). No Toyota passages or assets were copied. These remain simplified teaching models. See QA-v1.3.5.md for the review and validation record.

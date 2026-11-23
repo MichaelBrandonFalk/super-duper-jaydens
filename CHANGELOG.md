@@ -1,5 +1,15 @@
 # Releases
 
+## 1.3.5 (website only)
+
+- Used the same Clear path, Message desk, and Quiet space names in requirements, scope, work lists, budgets, checks, and answers.
+- Shared answer labels and checks from one content model, with regression checks for mismatches and missing requirements.
+- Removed unnecessary story terminology; taught operations directly and used hours for capacity.
+- Checked every scope requirement in the quality activity, including Quiet space. Preserved earlier completions without claiming they performed the new check.
+- Removed the unsupported banner trade; approved extra scope now has an explicit two-shift trade-off that quality bonuses cannot erase.
+- Moved tool selection after the learning activity and updated kit navigation.
+- Fixed saved PDCA trial values and updated older saved wording. Desktop releases remain paused.
+
 ## 1.3.4
 
 - Gave the beacon, relay, signal desk, workbench, map table, and test bench distinct, consistent roles.

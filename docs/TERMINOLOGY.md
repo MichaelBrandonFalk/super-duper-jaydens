@@ -1,24 +1,19 @@
-# Story terminology
+# Consistent learning context
 
-Reviewed November 23, 2026 for v1.3.4. These are story-object names, separate from the project-management vocabulary. Keep names stable across stories, choices, reports, and saved summaries.
+Current web wording: v1.3.5, reviewed November 23, 2026.
 
-| Name | Role |
-| --- | --- |
-| Signal desk | Neighbors use its low buttons to send messages and its message screen to read them. It is a hub deliverable, not the crew’s building bench. |
-| Beacon | The rooftop light flashes messages. The rover later has its own small beacon. |
-| Relay | The small box passes messages to a beacon. Build and test it before switching on that beacon. |
-| Workbench | The crew’s table for tools, parts, and building work. Bolt also checks route cards with a scanner on a workbench. |
-| Map table | Holds the route-planning screen. Shading it lets the map team plan a fourth stop in each district. |
-| Test bench | Holds the route-card printer and its card guide. Preparing it can recover one delayed shift. |
-| Clear path | The accessible path inside the hub. It is distinct from the rover’s delivery route. |
-| Job card | Names one job on a work list or the Ready/Doing/Done board. |
-| Kanban card | Returns when parts are used and requests replacement parts. This remains a curriculum term. |
-| Route card | Printed directions for a city crew or rover delivery. The printer and scanner activities work on these cards. |
-| Parts pack | Spare parts sent to city crews in the dispatch activity. |
-| Supply pack | A finite resource in the player’s hero kit used to complete a field job. |
-| Team color | Chooses the neighborhood with first delivery priority; it does not operate a beacon or send a message. |
-| Route arrow | A direction marker used by crews or the rover. It is not a beacon light. |
+The learning vocabulary is project management. Story props should not become an extra vocabulary test. Use these exact names in requirements, scope, work groups, budget headings, quality questions, feedback, and saved plans:
 
-The hub work-list labels are **Path**, **Signal desk**, and **Quiet nook**. The budget buys path panels, beacon lamps, and low signal desks. Hub quality checks cover the desk’s screen, the path, and the desk’s buttons.
+- **Clear path**: the accessible route through the Hero Hub.
+- **Message desk**: the desk with low buttons for sending messages and a screen for reading them.
+- **Quiet space**: a place to sit and rest away from noise.
 
-Verification: 36 automated checks passed, including a regression check that updates saved equipment wording without altering chosen answers, report delays, progress, or an unfinished replay. Browser checks covered revised stories and budget labels plus legacy plan-book text. Existing resource rules and all advanced curriculum notes remain intact.
+`learning-content.js` defines the three parts, neighbor notes, work-list names, jobs, and acceptance checks. The game imports these names into its answer choices, budget headings, checks, and feedback. The stories also use the same names. Do not substitute nook, recharge nook, recharge station, signal desk, Gear, or a shortened group label.
+
+The budget covers all three parts. The quality activity tests all three parts. The scheduling example builds the same Clear path used in the scope and work-breakdown lessons. Capacity is measured in hours, not invented work boxes.
+
+Keep real learning terms such as operations, stakeholders, requirements, scope, acceptance criteria, work breakdown structure, dependencies, capacity, contingency reserve, kanban, WIP, just-in-time, jidoka, andon, error-proofing, change control, kaizen, PDCA, and handover. Explain them with common words and concrete examples.
+
+Adventure tools are selected after the learning activity, on the Our plan page beside the city job that gives them context. Job cards track work, kanban cards request replacements, and printed direction cards tell crews where to go. These roles must stay distinct.
+
+Old saved records receive wording updates without rebuilding their answers from an unfinished replay. Earlier quality completions are retained, but are not represented as having performed the new Quiet space check.

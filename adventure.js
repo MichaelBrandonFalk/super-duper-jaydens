@@ -92,9 +92,9 @@ export const finds=[
       "Our radio can call a spare pair of hands for one job."
     ],
     [
-      "Code lamp",
+      "Message lamp",
       "signal",
-      "Bolt fits a code lamp. It can guide a crew to the right bay."
+      "Bolt fits a small message lamp. Its flashes can guide a crew to the right place."
     ]
   ],
   [
@@ -111,9 +111,9 @@ export const finds=[
   ],
   [
     [
-      "Guide jig",
+      "Card holder",
       "repair",
-      "Mika makes a spare guide. It can hold a small fitting in place."
+      "Mika packs a shaped card holder. It can hold printer cards straight."
     ],
     [
       "Test lens",
@@ -123,9 +123,9 @@ export const finds=[
   ],
   [
     [
-      "Dock flag",
+      "Message flag",
       "signal",
-      "Jayden makes a bright dock flag. It can guide a crew from a distance."
+      "Jayden makes a bright landing pad flag. It can guide a crew from a distance."
     ],
     [
       "Cargo hook",
@@ -191,23 +191,23 @@ export const fieldJobs=[
   ],
   [
     "The scattered bolts",
-    "The workbench needs a set of small bolts to build the signal desk. Sort the loose bolts or carry a ready set to the workbench.",
+    "The workbench needs a set of small bolts to build the Message desk. Sort the loose bolts or carry a ready set to the workbench.",
     [
       "sort",
       "carry"
     ],
     "Workbench bolts ready",
-    "The crew has the bolts it needs for the signal desk."
+    "The crew has the bolts it needs for the Message desk."
   ],
   [
-    "The loose relay socket",
-    "After moving the relay from the workbench to the roof, the crew finds a loose socket. Find it or hold it steady so the crew can tighten it.",
+    "The loose roof light bracket",
+    "The crew has put a light above the hub door. Its bracket is loose. Find the loose part or hold it steady so the crew can tighten it.",
     [
       "repair",
       "scan"
     ],
-    "Roof relay connected",
-    "The relay can now pass messages from the signal desk to the beacon."
+    "Roof light secured",
+    "The roof light stays in place so neighbors can find the hub after dark."
   ],
   [
     "Parts for the workbench",
@@ -247,31 +247,31 @@ export const fieldJobs=[
       "carry"
     ],
     "Covered storage ready",
-    "Spare beacon parts can now wait under the rain cover."
+    "Spare roof light parts can now wait under the rain cover."
   ],
   [
-    "The test bench’s card guide",
-    "The route-card printer sits on the test bench. Glare hides the mark used to line up its card guide. Shade the bench or fit a guide that holds cards straight.",
+    "Preparing another printer",
+    "The crew is setting up a second printer for the next shift. Glare makes its card holder hard to line up. Shade the test bench or fit a shaped card holder to keep cards straight.",
     [
       "shelter",
       "repair"
     ],
     "Test bench ready",
-    "The test crew can save one extra shift if our plans have caused a delay."
+    "The test crew can save one shift of rework when a plan needs repairs."
   ],
   [
-    "The high dock arrow",
-    "An arrow above the dock points away from the hub. Reach it or find its ground control to turn it the right way.",
+    "The high street arrow",
+    "An arrow above the street points away from the hub. Reach it or find its ground control to turn it the right way.",
     [
       "scan",
       "reach"
     ],
-    "Dock route marked",
-    "The dock crew can now find the hub."
+    "Street route marked",
+    "Crews can now follow the street signs to the hub."
   ],
   [
-    "Route cards for the library",
-    "A light box of route cards waits across the courtyard. Carry it over or ask the far crew to bring it to the library.",
+    "Direction cards for the library",
+    "A light box of direction cards waits across the courtyard. Carry it over or ask the far crew to bring it to the library.",
     [
       "signal",
       "carry"
@@ -295,14 +295,14 @@ const actions=[
 {signal:'sends a message to the far platform. The crew finds the hub.',crew:'calls the roof helper, who guides the station crew.'},
 {shelter:'shades the map table’s screen so the crew can plan the route.',reach:'reaches the canopy rail. The crew hangs a shade.'},
 {sort:'sorts the loose bolts for the workbench.',carry:'carries the small bolt pack to the workbench.'},
-{repair:'holds the loose socket steady while the crew tightens it.',scan:'spots the loose socket. The crew tightens it.'},
+{repair:'holds the loose bracket steady while the crew tightens it.',scan:'spots the loose bracket. The crew tightens it.'},
 {carry:'brings the light parts pack across the yard to the workbench.',shelter:'shades the parts pack so the crew can pack supplies there.'},
 {reach:'reaches the high supply latch.',repair:'fixes the lower handle so the hatch opens.'},
 {sort:'sorts the returned kanban cards by crew.',crew:'calls a helper to match returned kanban cards to parts packs.'},
 {signal:'sends a message asking the far crew to bring the rain cover.',carry:'brings the light rain cover across the yard.'},
-{shelter:'shades the test bench. The crew lines up the printer’s card guide.',repair:'helps the crew fit a shaped card guide to the printer on the test bench.'},
-{scan:'finds the dock arrow’s ground control. The crew turns it.',reach:'reaches the high dock arrow and turns it.'},
-{signal:'sends a message asking the far crew to bring the route-card box to the library.',carry:'carries the light route-card box across the courtyard to the library.'},
+{shelter:'shades the test bench. The crew lines up the printer’s card holder.',repair:'helps the crew fit a shaped card holder to the printer on the test bench.'},
+{scan:'finds the street arrow’s ground control. The crew turns it.',reach:'reaches the high street arrow and turns it.'},
+{signal:'sends a message asking the far crew to bring the direction-card box to the library.',carry:'carries the light direction-card box across the courtyard to the library.'},
 {reach:'reaches and turns the last route arrow.',scan:'finds the last route arrow’s ground control. The crew turns the arrow.'}
 ];
 export const districts=[{name:'Hill homes',need:4,unit:'home stops',benefit:'Neighbors receive their book and message packs.'},{name:'Sky station',need:4,unit:'platform stops',benefit:'Crews receive route updates and spare parts.'},{name:'River library',need:4,unit:'library stops',benefit:'Reading corners receive their book boxes.'}];
@@ -314,7 +314,7 @@ export function chooseFind(p,id,n){if(![0,1].includes(n))return {ok:false,text:'
 export function resolveField(p,id,kind,tool=''){if(!fieldJobs[id-1]||!p.done.includes(id))return {ok:false,text:'Finish this mission plan before running its field job.'};let name='',story='',delay=0;if(kind==='gear'){const item=availableGear(p,id).find(x=>x.id===tool);if(!item)return {ok:false,text:'That tool is not available for this job.'};name=item.name;const type=item.type;story=name+' '+actions[id-1][type];}
 else if(kind==='gadget'){const type=p.gadget==='projector'?'scan':'signal';if(!fieldJobs[id-1][2].includes(type))return {ok:false,text:'Our starting gadget does not fit this job.'};if(Object.entries(p.fieldPlans||{}).filter(([k,r])=>Number(k)!==id&&r.kind==='gadget').length>=2)return {ok:false,text:'Our two gadget power packs are used. Choose a tool, supply pack, or crew shift.'};name=p.gadget==='projector'?'Tiny projector':'Pocket kite';story=name+' '+actions[id-1][type];}
 else if(kind==='supply'){if(suppliesLeft(p,id)<1)return {ok:false,text:'No supply packs are left. Replan another job or use a crew shift.'};name='Supply pack';story='The crew uses a supply pack to finish this job. One fewer pack remains for later.';}
-else if(kind==='crew'){name='Crew shift';delay=1;story='The crew takes another shift to finish this job. It uses one of the rover’s route slots.';}
+else if(kind==='crew'){name='Crew shift';delay=1;story='The crew takes another shift to finish this job. That leaves time for one fewer rover delivery stop.';}
 else if(kind==='tomorrow'){name='Tomorrow’s list';story='This job stays open until tomorrow. The city does not gain this upgrade today.';}
 else return {ok:false,text:'Choose how to handle this field job.'};
 const outcome={kind,gear:kind==='gear'?tool:'',delay,done:kind!=='tomorrow',name,story};p.fieldPlans??={};p.fieldPlans[id]=outcome;p.routeLaunched=false;return {ok:true,...outcome};}
