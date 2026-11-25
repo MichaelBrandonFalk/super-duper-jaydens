@@ -1,5 +1,5 @@
 // Save migration is independent of the activity engine so old players keep their progress.
-import {challenges} from './challenge-config.js?v=1.5.0';
+import {challenges} from './challenge-config.js?v=1.5.1';
 const validId=n=>Number.isInteger(n)&&n>=1&&n<=13;
 const text=(s,max)=>typeof s==='string'?s.slice(0,max):'';
 export function cleanPlayState(raw,p){

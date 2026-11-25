@@ -1,8 +1,8 @@
-import {cleanPlayState} from './play-state.js?v=1.5.0';
-import {budgetLimit,capacityFor,demandFor} from './challenge-config.js?v=1.5.0';
-import {cleanCityStory} from './city-story.js?v=1.5.0';
-import {hubParts,needParts,scopeParts,workParts,workGroups,qualityParts,improvementChoices} from './learning-content.js?v=1.5.0';
-import {cleanAdventure} from './adventure.js?v=1.5.0';
+import {cleanPlayState} from './play-state.js?v=1.5.1';
+import {budgetLimit,capacityFor,demandFor} from './challenge-config.js?v=1.5.1';
+import {cleanCityStory} from './city-story.js?v=1.5.1';
+import {hubParts,needParts,scopeParts,workParts,workGroups,qualityParts,improvementChoices} from './learning-content.js?v=1.5.1';
+import {cleanAdventure} from './adventure.js?v=1.5.1';
 export const projectCards=[['Build a new Clear path',0],['Sweep the Clear path each day',1],['Draw a new city map',0],['Charge our radios each night',1]];
 export const needCards=[...needParts.map(p=>p.name),'Giant spinning sign','Moon base'];
 export const scopeCards=[...scopeParts.map(p=>p.name),'Moon base','Giant cake tower'];

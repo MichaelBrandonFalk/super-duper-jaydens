@@ -1,0 +1,66 @@
+[
+  {
+    "file": "assets/art/equipment-painted.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "bytes": 545746,
+    "sha256": "fb0fc0574e6494fce607ddd651ffead624d956008c6678edde3d9ed755c3fc60",
+    "atlas": {
+      "columns": 4,
+      "rows": 4,
+      "frames": 16
+    }
+  },
+  {
+    "file": "assets/art/hub-props-painted.webp",
+    "size": [
+      1254,
+      1254
+    ],
+    "bytes": 401412,
+    "sha256": "8e862ce8b94d1cb7d577bc2e1589efc40d4f62d76b7c5bb4d82e13794c997b94",
+    "atlas": {
+      "columns": 3,
+      "rows": 3,
+      "frames": 9
+    }
+  },
+  {
+    "file": "assets/art/hub-painted.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 399504,
+    "sha256": "39c570b952c1575909adaddaa287c569ae11104203df13d3dc1d86614db3bb39"
+  },
+  {
+    "file": "assets/art/hub-painted-small.webp",
+    "size": [
+      960,
+      640
+    ],
+    "bytes": 174748,
+    "sha256": "84a5dd1c754845a49efe9740c13033074bf89865f57e8f2d50e1d0bf1fbce8bd"
+  },
+  {
+    "file": "assets/art/hub-plan-painted.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 569536,
+    "sha256": "b22087b890aa53ffea8c129dbc38eea167c5896968e6ce84bced7482f40afc5f"
+  },
+  {
+    "file": "assets/art/hub-plan-painted-small.webp",
+    "size": [
+      960,
+      640
+    ],
+    "bytes": 215702,
+    "sha256": "0494f5c3325343394fc71ef37511f668e023a98e4b13cf17f0f4ee24a1cfe8e3"
+  }
+]

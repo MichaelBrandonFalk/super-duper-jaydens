@@ -1,6 +1,6 @@
-import {newActivity,artifact,budgetTotal,loads,finalActs,help} from './engine.js?v=1.5.0';
-import {missionResult,feedbackFor,flowState} from './operations.js?v=1.5.0';
-import {capacityFor,budgetLimit,demandFor,challenges} from './challenge-config.js?v=1.5.0';
+import {newActivity,artifact,budgetTotal,loads,finalActs,help} from './engine.js?v=1.5.1';
+import {missionResult,feedbackFor,flowState} from './operations.js?v=1.5.1';
+import {capacityFor,budgetLimit,demandFor,challenges} from './challenge-config.js?v=1.5.1';
 export {challenges};
 export function resumeTarget(p){
  if(!p.intro)return {href:'story-1',label:'Open our first comic'};

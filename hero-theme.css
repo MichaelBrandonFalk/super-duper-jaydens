@@ -49,3 +49,20 @@ body[data-hide-art=true] .gadget-art,body[data-hide-art=true] .hub-drawing{displ
 @media print{.gadget-art{filter:none}.hub-memories>div{display:block}.hint-panel,.challenge-banner,.result-comparison{break-inside:avoid}}
 .book-repair{border-left:3px solid #edc779;padding:.5rem .7rem;background:#263d4b;color:#ffe0a2;font-size:.9rem;line-height:1.6}
 @media(max-width:650px){.hub-room-label{display:none}}
+
+/* Painted replacements share the chapter art's textures, brass, and amber light. */
+.painted-gadget{width:var(--gadget-size);height:var(--gadget-size);background-image:url('assets/art/equipment-painted.webp');background-repeat:no-repeat;background-size:400% 400%;filter:none}
+.mentor-signal .painted-gadget{width:64px;height:64px;margin:0}
+.painted-hub{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:3/2;background:#111b2b}
+.hub-backdrop{display:block;width:100%;height:100%;object-fit:cover}
+.hub-prop{position:absolute;display:block;aspect-ratio:1;background-image:url('assets/art/hub-props-painted.webp');background-repeat:no-repeat;background-size:300% 300%;pointer-events:none}
+.hub-prop-street{left:0%;top:51%;width:11.5%}
+.hub-prop-entrance{left:4.5%;top:41.5%;width:6.5%}
+.hub-prop-shade{left:37.3%;top:63.5%;width:17%}
+.hub-prop-map{left:13%;top:32.7%;width:13%}
+.hub-prop-bowls{left:8.85%;top:42.15%;width:9%;transform:scaleY(.55);transform-origin:bottom center}
+.hub-prop-mat{left:8.85%;top:41.84%;width:9%;transform:scaleY(.3);transform-origin:bottom center}
+.hub-prop-stars{left:31.9%;top:-3.3%;width:34.8%}
+.hub-prop-team{left:39%;top:6.06%;width:22%}
+.hub-prop-pad{left:72%;top:72.1%;width:20%}
+@media(max-width:520px){.mentor-signal .painted-gadget{width:44px;height:44px}}
