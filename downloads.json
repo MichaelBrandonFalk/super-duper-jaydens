@@ -1,50 +1,50 @@
 {
-  "version": "1.4.9",
+  "version": "1.5.1",
   "files": [
     {
       "id": "windows",
       "platform": "Windows",
       "format": "64-bit installer",
-      "file": "Super-Duper-Jaydens-1.4.9-Windows-x64-Setup.exe",
+      "file": "Super-Duper-Jaydens-1.5.1-Windows-x64-Setup.exe",
       "primary": true,
-      "bytes": 136946864,
-      "sha256": "43bad1ce07952d74c6ebf235a59c1af6368350dfc129c7c12b2cfe3770706bea"
+      "bytes": 139267554,
+      "sha256": "9de7d701e0777e82bbcfaa94497dd7e010d29009f7741eefb4157718f7783d90"
     },
     {
       "id": "mac",
       "platform": "Mac",
       "format": "macOS 13+ · Universal DMG · Apple silicon and Intel",
-      "file": "Super-Duper-Jaydens-1.4.9-macOS-universal.dmg",
+      "file": "Super-Duper-Jaydens-1.5.1-macOS-universal.dmg",
       "primary": true,
-      "bytes": 239339614,
-      "sha256": "b4d1e99289be78511c851d29ee93f3051fef86090d144a7ac69dd9993b3b3617"
+      "bytes": 241692269,
+      "sha256": "3cc48bf4bcb8d7170568d99a8961cdd6e12eb49fe637f89632ec82a227ae2118"
     },
     {
       "id": "mint",
       "platform": "Linux Mint",
       "format": "64-bit .deb installer",
-      "file": "Super-Duper-Jaydens-1.4.9-Linux-x64.deb",
+      "file": "Super-Duper-Jaydens-1.5.1-Linux-x64.deb",
       "primary": true,
-      "bytes": 116693568,
-      "sha256": "512ac3eb0e66d77ac586aa850e61a3acbfa6c4a320e1e2cdd08e77ddd84a3f98"
+      "bytes": 119013536,
+      "sha256": "e327d53782beaef503b4d81ab16b7e90f1fa9e099dbd0418a3d63791cae65fd2"
     },
     {
       "id": "windows-portable",
       "platform": "Windows portable",
       "format": "64-bit · no installation",
-      "file": "Super-Duper-Jaydens-1.4.9-Windows-x64-Portable.exe",
+      "file": "Super-Duper-Jaydens-1.5.1-Windows-x64-Portable.exe",
       "primary": false,
-      "bytes": 126025178,
-      "sha256": "ddd06ee7adcc848493752c1e99daa2d48bdee56b395c584d02a789f6b6338055"
+      "bytes": 128363666,
+      "sha256": "f1226b3f2dbb89a99ede986d5d867488b62d3998cb813080f7c9677cd82b11d1"
     },
     {
       "id": "linux-portable",
       "platform": "Linux portable",
       "format": "64-bit AppImage",
-      "file": "Super-Duper-Jaydens-1.4.9-Linux-x64.AppImage",
+      "file": "Super-Duper-Jaydens-1.5.1-Linux-x64.AppImage",
       "primary": false,
-      "bytes": 141359269,
-      "sha256": "a2d95d88965add815f59a2f14b7c482102ee9576e87d37fd4f1f37a4c7bc58c7"
+      "bytes": 143683805,
+      "sha256": "30fc61336d1e2198d3479aaf8f40e04f78f5ce938055482d862e4b0ad109a526"
     }
   ]
 }
